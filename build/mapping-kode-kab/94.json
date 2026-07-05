@@ -1,0 +1,147 @@
+{
+  "250100": {
+    "kabupaten_id": "9471",
+    "api_name": "Kab. Jayapura",
+    "normalized": "Jayapura"
+  },
+  "250200": {
+    "kabupaten_id": "9409",
+    "api_name": "Kab. Biak Numfor",
+    "normalized": "Biak Numfor"
+  },
+  "250300": {
+    "kabupaten_id": "9408",
+    "api_name": "Kab. Kepulauan Yapen",
+    "normalized": "Kepulauan Yapen"
+  },
+  "250700": {
+    "kabupaten_id": "9401",
+    "api_name": "Kab. Merauke",
+    "normalized": "Merauke"
+  },
+  "250800": {
+    "kabupaten_id": "9402",
+    "api_name": "Kab. Jaya Wijaya",
+    "normalized": "Jaya Wijaya"
+  },
+  "250900": {
+    "kabupaten_id": "9404",
+    "api_name": "Kab. Nabire",
+    "normalized": "Nabire"
+  },
+  "251000": {
+    "kabupaten_id": "9410",
+    "api_name": "Kab. Paniai",
+    "normalized": "Paniai"
+  },
+  "251100": {
+    "kabupaten_id": "9411",
+    "api_name": "Kab. Puncak Jaya",
+    "normalized": "Puncak Jaya"
+  },
+  "251200": {
+    "kabupaten_id": "9412",
+    "api_name": "Kab. Mimika",
+    "normalized": "Mimika"
+  },
+  "251300": {
+    "kabupaten_id": "9413",
+    "api_name": "Kab. Boven Digoel",
+    "normalized": "Boven Digoel"
+  },
+  "251400": {
+    "kabupaten_id": "9414",
+    "api_name": "Kab. Mappi",
+    "normalized": "Mappi"
+  },
+  "251500": {
+    "kabupaten_id": "9415",
+    "api_name": "Kab. Asmat",
+    "normalized": "Asmat"
+  },
+  "251600": {
+    "kabupaten_id": "9416",
+    "api_name": "Kab. Yahukimo",
+    "normalized": "Yahukimo"
+  },
+  "251700": {
+    "kabupaten_id": "9417",
+    "api_name": "Kab. Pegunungan Bintang",
+    "normalized": "Pegunungan Bintang"
+  },
+  "251800": {
+    "kabupaten_id": "9418",
+    "api_name": "Kab. Tolikara",
+    "normalized": "Tolikara"
+  },
+  "251900": {
+    "kabupaten_id": "9419",
+    "api_name": "Kab. Sarmi",
+    "normalized": "Sarmi"
+  },
+  "252000": {
+    "kabupaten_id": "9420",
+    "api_name": "Kab. Keerom",
+    "normalized": "Keerom"
+  },
+  "252600": {
+    "kabupaten_id": "9426",
+    "api_name": "Kab. Waropen",
+    "normalized": "Waropen"
+  },
+  "252700": {
+    "kabupaten_id": "9427",
+    "api_name": "Kab. Supiori",
+    "normalized": "Supiori"
+  },
+  "252800": {
+    "kabupaten_id": "9428",
+    "api_name": "Kab. Memberamo Raya",
+    "normalized": "Memberamo Raya"
+  },
+  "252900": {
+    "kabupaten_id": "9429",
+    "api_name": "Kab. Nduga",
+    "normalized": "Nduga"
+  },
+  "253000": {
+    "kabupaten_id": "9430",
+    "api_name": "Kab. Lanny Jaya",
+    "normalized": "Lanny Jaya"
+  },
+  "253100": {
+    "kabupaten_id": "9431",
+    "api_name": "Kab. Membramo Tengah",
+    "normalized": "Membramo Tengah"
+  },
+  "253200": {
+    "kabupaten_id": "9432",
+    "api_name": "Kab. Yalimo",
+    "normalized": "Yalimo"
+  },
+  "253300": {
+    "kabupaten_id": "9433",
+    "api_name": "kab. Puncak",
+    "normalized": "Puncak"
+  },
+  "253400": {
+    "kabupaten_id": "9434",
+    "api_name": "Kab. Dogiyai",
+    "normalized": "Dogiyai"
+  },
+  "253500": {
+    "kabupaten_id": "9436",
+    "api_name": "Kab. Deiyai",
+    "normalized": "Deiyai"
+  },
+  "253600": {
+    "kabupaten_id": "9435",
+    "api_name": "Kab. Intan Jaya",
+    "normalized": "Intan Jaya"
+  },
+  "256000": {
+    "kabupaten_id": "9471",
+    "api_name": "Kota Jayapura",
+    "normalized": "Jayapura"
+  }
+}

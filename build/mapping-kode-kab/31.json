@@ -1,0 +1,32 @@
+{
+  "016000": {
+    "kabupaten_id": "3173",
+    "api_name": "Kota Jakarta Pusat",
+    "normalized": "Jakarta Pusat"
+  },
+  "010100": {
+    "kabupaten_id": "3101",
+    "api_name": "Kab. Kepulauan Seribu",
+    "normalized": "Kepulauan Seribu"
+  },
+  "016100": {
+    "kabupaten_id": "3175",
+    "api_name": "Kota Jakarta Utara",
+    "normalized": "Jakarta Utara"
+  },
+  "016200": {
+    "kabupaten_id": "3174",
+    "api_name": "Kota Jakarta Barat",
+    "normalized": "Jakarta Barat"
+  },
+  "016300": {
+    "kabupaten_id": "3171",
+    "api_name": "Kota Jakarta Selatan",
+    "normalized": "Jakarta Selatan"
+  },
+  "016400": {
+    "kabupaten_id": "3172",
+    "api_name": "Kota Jakarta Timur",
+    "normalized": "Jakarta Timur"
+  }
+}

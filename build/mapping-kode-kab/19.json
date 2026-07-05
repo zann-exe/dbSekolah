@@ -1,0 +1,37 @@
+{
+  "290100": {
+    "kabupaten_id": "1901",
+    "api_name": "Kab. Bangka",
+    "normalized": "Bangka"
+  },
+  "290200": {
+    "kabupaten_id": "1902",
+    "api_name": "Kab. Belitung",
+    "normalized": "Belitung"
+  },
+  "290300": {
+    "kabupaten_id": "1904",
+    "api_name": "Kab. Bangka Tengah",
+    "normalized": "Bangka Tengah"
+  },
+  "290400": {
+    "kabupaten_id": "1903",
+    "api_name": "Kab. Bangka Barat",
+    "normalized": "Bangka Barat"
+  },
+  "290500": {
+    "kabupaten_id": "1905",
+    "api_name": "Kab. Bangka Selatan",
+    "normalized": "Bangka Selatan"
+  },
+  "290600": {
+    "kabupaten_id": "1906",
+    "api_name": "Kab. Belitung Timur",
+    "normalized": "Belitung Timur"
+  },
+  "296000": {
+    "kabupaten_id": "1971",
+    "api_name": "Kota Pangkalpinang",
+    "normalized": "Pangkalpinang"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "230100": {
+    "kabupaten_id": "5201",
+    "api_name": "Kab. Lombok Barat",
+    "normalized": "Lombok Barat"
+  },
+  "230200": {
+    "kabupaten_id": "5202",
+    "api_name": "Kab. Lombok Tengah",
+    "normalized": "Lombok Tengah"
+  },
+  "230300": {
+    "kabupaten_id": "5203",
+    "api_name": "Kab. Lombok Timur",
+    "normalized": "Lombok Timur"
+  },
+  "230400": {
+    "kabupaten_id": "5204",
+    "api_name": "Kab. Sumbawa",
+    "normalized": "Sumbawa"
+  },
+  "230500": {
+    "kabupaten_id": "5205",
+    "api_name": "Kab. Dompu",
+    "normalized": "Dompu"
+  },
+  "230600": {
+    "kabupaten_id": "5272",
+    "api_name": "Kab. Bima",
+    "normalized": "Bima"
+  },
+  "230700": {
+    "kabupaten_id": "5207",
+    "api_name": "Kab. Sumbawa Barat",
+    "normalized": "Sumbawa Barat"
+  },
+  "230800": {
+    "kabupaten_id": "5208",
+    "api_name": "Kab. Lombok Utara",
+    "normalized": "Lombok Utara"
+  },
+  "236000": {
+    "kabupaten_id": "5271",
+    "api_name": "Kota Mataram",
+    "normalized": "Mataram"
+  },
+  "236100": {
+    "kabupaten_id": "5272",
+    "api_name": "Kota Bima",
+    "normalized": "Bima"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "060200": {
+    "kabupaten_id": "1109",
+    "api_name": "Kab. Pidie",
+    "normalized": "Pidie"
+  },
+  "060600": {
+    "kabupaten_id": "1107",
+    "api_name": "Kab. Aceh Barat",
+    "normalized": "Aceh Barat"
+  },
+  "060700": {
+    "kabupaten_id": "1103",
+    "api_name": "Kab. Aceh Selatan",
+    "normalized": "Aceh Selatan"
+  },
+  "061100": {
+    "kabupaten_id": "1101",
+    "api_name": "Kab. Simeulue",
+    "normalized": "Simeulue"
+  },
+  "061200": {
+    "kabupaten_id": "1110",
+    "api_name": "Kab. Bireuen",
+    "normalized": "Bireuen"
+  },
+  "061600": {
+    "kabupaten_id": "1116",
+    "api_name": "Kab. Aceh Jaya",
+    "normalized": "Aceh Jaya"
+  },
+  "061700": {
+    "kabupaten_id": "1112",
+    "api_name": "Kab. Aceh Barat Daya",
+    "normalized": "Aceh Barat Daya"
+  },
+  "066300": {
+    "kabupaten_id": "1173",
+    "api_name": "Kota Langsa",
+    "normalized": "Langsa"
+  },
+  "066400": {
+    "kabupaten_id": "1175",
+    "api_name": "Kota Subulussalam",
+    "normalized": "Subulussalam"
+  },
+  "060100": {
+    "kabupaten_id": "1108",
+    "api_name": "Kab. Aceh Besar",
+    "normalized": "Aceh Besar"
+  },
+  "060300": {
+    "kabupaten_id": "1111",
+    "api_name": "Kab. Aceh Utara",
+    "normalized": "Aceh Utara"
+  },
+  "060400": {
+    "kabupaten_id": "1105",
+    "api_name": "Kab. Aceh Timur",
+    "normalized": "Aceh Timur"
+  },
+  "060500": {
+    "kabupaten_id": "1106",
+    "api_name": "Kab. Aceh Tengah",
+    "normalized": "Aceh Tengah"
+  },
+  "060800": {
+    "kabupaten_id": "1104",
+    "api_name": "Kab. Aceh Tenggara",
+    "normalized": "Aceh Tenggara"
+  },
+  "061300": {
+    "kabupaten_id": "1102",
+    "api_name": "Kab. Aceh Singkil",
+    "normalized": "Aceh Singkil"
+  },
+  "061500": {
+    "kabupaten_id": "1115",
+    "api_name": "Kab. Nagan Raya",
+    "normalized": "Nagan Raya"
+  },
+  "061400": {
+    "kabupaten_id": "1114",
+    "api_name": "Kab. Aceh Tamiang",
+    "normalized": "Aceh Tamiang"
+  },
+  "061900": {
+    "kabupaten_id": "1117",
+    "api_name": "Kab. Bener Meriah",
+    "normalized": "Bener Meriah"
+  },
+  "062000": {
+    "kabupaten_id": "1118",
+    "api_name": "Kab. Pidie Jaya",
+    "normalized": "Pidie Jaya"
+  },
+  "061800": {
+    "kabupaten_id": "1113",
+    "api_name": "Kab. Gayo Lues",
+    "normalized": "Gayo Lues"
+  },
+  "066100": {
+    "kabupaten_id": "1171",
+    "api_name": "Kota Banda Aceh",
+    "normalized": "Banda Aceh"
+  },
+  "066000": {
+    "kabupaten_id": "1172",
+    "api_name": "Kota Sabang",
+    "normalized": "Sabang"
+  },
+  "066200": {
+    "kabupaten_id": "1174",
+    "api_name": "Kota Lhokseumawe",
+    "normalized": "Lhokseumawe"
+  }
+}

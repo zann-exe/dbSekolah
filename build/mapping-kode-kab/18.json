@@ -1,0 +1,77 @@
+{
+  "120100": {
+    "kabupaten_id": "1803",
+    "api_name": "Kab. Lampung Selatan",
+    "normalized": "Lampung Selatan"
+  },
+  "120200": {
+    "kabupaten_id": "1805",
+    "api_name": "Kab. Lampung Tengah",
+    "normalized": "Lampung Tengah"
+  },
+  "120300": {
+    "kabupaten_id": "1806",
+    "api_name": "Kab. Lampung Utara",
+    "normalized": "Lampung Utara"
+  },
+  "120400": {
+    "kabupaten_id": "1801",
+    "api_name": "Kab. Lampung Barat",
+    "normalized": "Lampung Barat"
+  },
+  "120500": {
+    "kabupaten_id": "1808",
+    "api_name": "Kab. Tulang Bawang",
+    "normalized": "Tulang Bawang"
+  },
+  "120600": {
+    "kabupaten_id": "1802",
+    "api_name": "Kab. Tanggamus",
+    "normalized": "Tanggamus"
+  },
+  "120700": {
+    "kabupaten_id": "1804",
+    "api_name": "Kab. Lampung Timur",
+    "normalized": "Lampung Timur"
+  },
+  "120800": {
+    "kabupaten_id": "1807",
+    "api_name": "Kab. Way Kanan",
+    "normalized": "Way Kanan"
+  },
+  "120900": {
+    "kabupaten_id": "1809",
+    "api_name": "Kab. Pesawaran",
+    "normalized": "Pesawaran"
+  },
+  "121000": {
+    "kabupaten_id": "1810",
+    "api_name": "Kab. Pringsewu",
+    "normalized": "Pringsewu"
+  },
+  "121100": {
+    "kabupaten_id": "1811",
+    "api_name": "Kab. Mesuji",
+    "normalized": "Mesuji"
+  },
+  "121200": {
+    "kabupaten_id": "1812",
+    "api_name": "Kab. Tulang Bawang Barat",
+    "normalized": "Tulang Bawang Barat"
+  },
+  "121300": {
+    "kabupaten_id": "1813",
+    "api_name": "KAB. PESISIR BARAT",
+    "normalized": "Pesisir Barat"
+  },
+  "126000": {
+    "kabupaten_id": "1871",
+    "api_name": "Kota Bandar Lampung",
+    "normalized": "Bandar Lampung"
+  },
+  "126100": {
+    "kabupaten_id": "1872",
+    "api_name": "Kota Metro",
+    "normalized": "Metro"
+  }
+}

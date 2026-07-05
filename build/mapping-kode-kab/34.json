@@ -1,0 +1,27 @@
+{
+  "040100": {
+    "kabupaten_id": "3402",
+    "api_name": "Kab. Bantul",
+    "normalized": "Bantul"
+  },
+  "040200": {
+    "kabupaten_id": "3404",
+    "api_name": "Kab. Sleman",
+    "normalized": "Sleman"
+  },
+  "040300": {
+    "kabupaten_id": "3403",
+    "api_name": "Kab. Gunung Kidul",
+    "normalized": "Gunung Kidul"
+  },
+  "040400": {
+    "kabupaten_id": "3401",
+    "api_name": "Kab. Kulon Progo",
+    "normalized": "Kulon Progo"
+  },
+  "046000": {
+    "kabupaten_id": "3471",
+    "api_name": "Kota Yogyakarta",
+    "normalized": "Yogyakarta"
+  }
+}

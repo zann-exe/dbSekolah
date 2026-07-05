@@ -1,0 +1,122 @@
+{
+  "190100": {
+    "kabupaten_id": "7308",
+    "api_name": "Kab. Maros",
+    "normalized": "Maros"
+  },
+  "190200": {
+    "kabupaten_id": "7309",
+    "api_name": "Kab. Pangkajene Kepulauan",
+    "normalized": "Pangkajene Kepulauan"
+  },
+  "190300": {
+    "kabupaten_id": "7306",
+    "api_name": "Kab. Gowa",
+    "normalized": "Gowa"
+  },
+  "190400": {
+    "kabupaten_id": "7305",
+    "api_name": "Kab. Takalar",
+    "normalized": "Takalar"
+  },
+  "190500": {
+    "kabupaten_id": "7304",
+    "api_name": "Kab. Jeneponto",
+    "normalized": "Jeneponto"
+  },
+  "190600": {
+    "kabupaten_id": "7310",
+    "api_name": "Kab. Barru",
+    "normalized": "Barru"
+  },
+  "190700": {
+    "kabupaten_id": "7311",
+    "api_name": "Kab. Bone",
+    "normalized": "Bone"
+  },
+  "190800": {
+    "kabupaten_id": "7313",
+    "api_name": "Kab. Wajo",
+    "normalized": "Wajo"
+  },
+  "190900": {
+    "kabupaten_id": "7312",
+    "api_name": "Kab. Soppeng",
+    "normalized": "Soppeng"
+  },
+  "191000": {
+    "kabupaten_id": "7303",
+    "api_name": "Kab. Bantaeng",
+    "normalized": "Bantaeng"
+  },
+  "191100": {
+    "kabupaten_id": "7302",
+    "api_name": "Kab. Bulukumba",
+    "normalized": "Bulukumba"
+  },
+  "191200": {
+    "kabupaten_id": "7307",
+    "api_name": "Kab. Sinjai",
+    "normalized": "Sinjai"
+  },
+  "191300": {
+    "kabupaten_id": "7301",
+    "api_name": "Kab. Kepulauan Selayar",
+    "normalized": "Kepulauan Selayar"
+  },
+  "191400": {
+    "kabupaten_id": "7315",
+    "api_name": "Kab. Pinrang",
+    "normalized": "Pinrang"
+  },
+  "191500": {
+    "kabupaten_id": "7314",
+    "api_name": "Kab. Sidenreng Rappang",
+    "normalized": "Sidenreng Rappang"
+  },
+  "191600": {
+    "kabupaten_id": "7316",
+    "api_name": "Kab. Enrekang",
+    "normalized": "Enrekang"
+  },
+  "191700": {
+    "kabupaten_id": "7317",
+    "api_name": "Kab. Luwu",
+    "normalized": "Luwu"
+  },
+  "191800": {
+    "kabupaten_id": "7318",
+    "api_name": "Kab. Tana Toraja",
+    "normalized": "Tana Toraja"
+  },
+  "192400": {
+    "kabupaten_id": "7322",
+    "api_name": "Kab. Luwu Utara",
+    "normalized": "Luwu Utara"
+  },
+  "192600": {
+    "kabupaten_id": "7325",
+    "api_name": "Kab. Luwu Timur",
+    "normalized": "Luwu Timur"
+  },
+  "192700": {
+    "kabupaten_id": "7326",
+    "api_name": "Kab. Toraja Utara",
+    "normalized": "Toraja Utara"
+  },
+  "196000": {
+    "kabupaten_id": "7371",
+    "api_name": "Kota Makassar",
+    "normalized": "Makassar"
+  },
+  "196100": {
+    "kabupaten_id": "7372",
+    "api_name": "Kota Parepare",
+    "normalized": "Parepare"
+  },
+  "196200": {
+    "kabupaten_id": "7373",
+    "api_name": "Kota Palopo",
+    "normalized": "Palopo"
+  }
+}

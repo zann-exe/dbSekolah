@@ -1,0 +1,47 @@
+{
+  "220100": {
+    "kabupaten_id": "5108",
+    "api_name": "Kab. Buleleng",
+    "normalized": "Buleleng"
+  },
+  "220200": {
+    "kabupaten_id": "5101",
+    "api_name": "Kab. Jembrana",
+    "normalized": "Jembrana"
+  },
+  "220300": {
+    "kabupaten_id": "5102",
+    "api_name": "Kab. Tabanan",
+    "normalized": "Tabanan"
+  },
+  "220400": {
+    "kabupaten_id": "5103",
+    "api_name": "Kab. Badung",
+    "normalized": "Badung"
+  },
+  "220500": {
+    "kabupaten_id": "5104",
+    "api_name": "Kab. Gianyar",
+    "normalized": "Gianyar"
+  },
+  "220600": {
+    "kabupaten_id": "5105",
+    "api_name": "Kab. Klungkung",
+    "normalized": "Klungkung"
+  },
+  "220700": {
+    "kabupaten_id": "5106",
+    "api_name": "Kab. Bangli",
+    "normalized": "Bangli"
+  },
+  "220800": {
+    "kabupaten_id": "5107",
+    "api_name": "Kab. Karang Asem",
+    "normalized": "Karang Asem"
+  },
+  "226000": {
+    "kabupaten_id": "5171",
+    "api_name": "Kota Denpasar",
+    "normalized": "Denpasar"
+  }
+}

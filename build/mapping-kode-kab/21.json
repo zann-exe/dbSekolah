@@ -1,0 +1,37 @@
+{
+  "310100": {
+    "kabupaten_id": "2102",
+    "api_name": "Kab. Bintan",
+    "normalized": "Bintan"
+  },
+  "310200": {
+    "kabupaten_id": "2101",
+    "api_name": "Kab. Karimun",
+    "normalized": "Karimun"
+  },
+  "310300": {
+    "kabupaten_id": "2103",
+    "api_name": "Kab. Natuna",
+    "normalized": "Natuna"
+  },
+  "310400": {
+    "kabupaten_id": "2104",
+    "api_name": "Kab. Lingga",
+    "normalized": "Lingga"
+  },
+  "310500": {
+    "kabupaten_id": "2105",
+    "api_name": "Kab. Kepulauan Anambas",
+    "normalized": "Kepulauan Anambas"
+  },
+  "316000": {
+    "kabupaten_id": "2171",
+    "api_name": "Kota Batam",
+    "normalized": "Batam"
+  },
+  "316100": {
+    "kabupaten_id": "2172",
+    "api_name": "Kota Tanjungpinang",
+    "normalized": "Tanjungpinang"
+  }
+}

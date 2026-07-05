@@ -1,0 +1,77 @@
+{
+  "170100": {
+    "kabupaten_id": "7101",
+    "api_name": "Kab. Bolaang Mongondaw",
+    "normalized": "Bolaang Mongondaw"
+  },
+  "170200": {
+    "kabupaten_id": "7102",
+    "api_name": "Kab. Minahasa",
+    "normalized": "Minahasa"
+  },
+  "170300": {
+    "kabupaten_id": "7103",
+    "api_name": "Kab. Kep. Sangihe",
+    "normalized": "Kep Sangihe"
+  },
+  "170400": {
+    "kabupaten_id": "7104",
+    "api_name": "Kab. Kepulauan Talaud",
+    "normalized": "Kepulauan Talaud"
+  },
+  "170500": {
+    "kabupaten_id": "7105",
+    "api_name": "Kab. Minahasa Selatan",
+    "normalized": "Minahasa Selatan"
+  },
+  "170600": {
+    "kabupaten_id": "7106",
+    "api_name": "Kab. Minahasa Utara",
+    "normalized": "Minahasa Utara"
+  },
+  "170800": {
+    "kabupaten_id": "7107",
+    "api_name": "Kab. Bolaang Mongondow Utara",
+    "normalized": "Bolaang Mongondow Utara"
+  },
+  "170900": {
+    "kabupaten_id": "7108",
+    "api_name": "Kab. Kepulauan Sitaro",
+    "normalized": "Kepulauan Sitaro"
+  },
+  "171000": {
+    "kabupaten_id": "7109",
+    "api_name": "Kab. Minahasa Tenggara",
+    "normalized": "Minahasa Tenggara"
+  },
+  "171100": {
+    "kabupaten_id": "7111",
+    "api_name": "Kab. Bolaang Mongondaw Timur",
+    "normalized": "Bolaang Mongondaw Timur"
+  },
+  "171200": {
+    "kabupaten_id": "7110",
+    "api_name": "Kab. Bolaang Mongondaw Selatan",
+    "normalized": "Bolaang Mongondaw Selatan"
+  },
+  "176000": {
+    "kabupaten_id": "7171",
+    "api_name": "Kota Manado",
+    "normalized": "Manado"
+  },
+  "176100": {
+    "kabupaten_id": "7172",
+    "api_name": "Kota Bitung",
+    "normalized": "Bitung"
+  },
+  "176200": {
+    "kabupaten_id": "7173",
+    "api_name": "Kota Tomohon",
+    "normalized": "Tomohon"
+  },
+  "176300": {
+    "kabupaten_id": "7174",
+    "api_name": "Kota Kotamobagu",
+    "normalized": "Kotamobagu"
+  }
+}

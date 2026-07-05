@@ -1,0 +1,32 @@
+{
+  "300100": {
+    "kabupaten_id": "7501",
+    "api_name": "Kab. Boalemo",
+    "normalized": "Boalemo"
+  },
+  "300200": {
+    "kabupaten_id": "7571",
+    "api_name": "Kab. Gorontalo",
+    "normalized": "Gorontalo"
+  },
+  "300300": {
+    "kabupaten_id": "7503",
+    "api_name": "Kab. Pohuwato",
+    "normalized": "Pohuwato"
+  },
+  "300400": {
+    "kabupaten_id": "7504",
+    "api_name": "Kab. Bone Bolango",
+    "normalized": "Bone Bolango"
+  },
+  "300500": {
+    "kabupaten_id": "7505",
+    "api_name": "Kab. Gorontalo Utara",
+    "normalized": "Gorontalo Utara"
+  },
+  "306000": {
+    "kabupaten_id": "7571",
+    "api_name": "Kota Gorontalo",
+    "normalized": "Gorontalo"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "200100": {
+    "kabupaten_id": "7403",
+    "api_name": "Kab. Konawe",
+    "normalized": "Konawe"
+  },
+  "200200": {
+    "kabupaten_id": "7402",
+    "api_name": "Kab. Muna",
+    "normalized": "Muna"
+  },
+  "200300": {
+    "kabupaten_id": "7401",
+    "api_name": "Kab. Buton",
+    "normalized": "Buton"
+  },
+  "200400": {
+    "kabupaten_id": "7404",
+    "api_name": "Kab. Kolaka",
+    "normalized": "Kolaka"
+  },
+  "200500": {
+    "kabupaten_id": "7405",
+    "api_name": "Kab. Konawe Selatan",
+    "normalized": "Konawe Selatan"
+  },
+  "200600": {
+    "kabupaten_id": "7407",
+    "api_name": "Kab. Wakatobi",
+    "normalized": "Wakatobi"
+  },
+  "200700": {
+    "kabupaten_id": "7406",
+    "api_name": "Kab. Bombana",
+    "normalized": "Bombana"
+  },
+  "200800": {
+    "kabupaten_id": "7408",
+    "api_name": "Kab. Kolaka Utara",
+    "normalized": "Kolaka Utara"
+  },
+  "200900": {
+    "kabupaten_id": "7410",
+    "api_name": "Kab. Konawe Utara",
+    "normalized": "Konawe Utara"
+  },
+  "201000": {
+    "kabupaten_id": "7409",
+    "api_name": "Kab. Buton Utara",
+    "normalized": "Buton Utara"
+  },
+  "201100": {
+    "kabupaten_id": "7411",
+    "api_name": "KAB. KOLAKA TIMUR",
+    "normalized": "Kolaka Timur"
+  },
+  "201200": {
+    "kabupaten_id": "7412",
+    "api_name": "Kab. Konawe Kepulauan",
+    "normalized": "Konawe Kepulauan"
+  },
+  "201300": {
+    "kabupaten_id": "7413",
+    "api_name": "Kab. Muna Barat",
+    "normalized": "Muna Barat"
+  },
+  "201400": {
+    "kabupaten_id": "7415",
+    "api_name": "Kab. Buton Selatan",
+    "normalized": "Buton Selatan"
+  },
+  "201600": {
+    "kabupaten_id": "7414",
+    "api_name": "Kab. Buton Tengah",
+    "normalized": "Buton Tengah"
+  },
+  "206000": {
+    "kabupaten_id": "7471",
+    "api_name": "Kota Kendari",
+    "normalized": "Kendari"
+  },
+  "206100": {
+    "kabupaten_id": "7472",
+    "api_name": "Kota Baubau",
+    "normalized": "Baubau"
+  }
+}

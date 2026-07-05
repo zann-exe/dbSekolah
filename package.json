@@ -1,0 +1,16 @@
+{
+  "name": "genlog-sekolah-data",
+  "version": "1.0.0",
+  "description": "Database sekolah seluruh Indonesia ter-normalisasi dan sinkron dengan kode wilayah Kemendagri",
+  "type": "module",
+  "main": "build/build-all.js",
+  "scripts": {
+    "fetch": "node build/fetch-all.js",
+    "normalize": "node build/normalize.js",
+    "build-index": "node build/build-index.js",
+    "validate": "node build/validate.js",
+    "build-all": "node build/fetch-all.js && node build/normalize.js && node build/build-index.js && node build/validate.js"
+  },
+  "author": "zann-exe",
+  "license": "MIT"
+}

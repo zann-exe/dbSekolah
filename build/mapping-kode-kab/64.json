@@ -1,0 +1,52 @@
+{
+  "160100": {
+    "kabupaten_id": "6401",
+    "api_name": "Kab. Paser",
+    "normalized": "Paser"
+  },
+  "160200": {
+    "kabupaten_id": "6403",
+    "api_name": "Kab. Kutai Kartanegara",
+    "normalized": "Kutai Kartanegara"
+  },
+  "160300": {
+    "kabupaten_id": "6405",
+    "api_name": "Kab. Berau",
+    "normalized": "Berau"
+  },
+  "160900": {
+    "kabupaten_id": "6402",
+    "api_name": "Kab. Kutai Barat",
+    "normalized": "Kutai Barat"
+  },
+  "161000": {
+    "kabupaten_id": "6404",
+    "api_name": "Kab. Kutai Timur",
+    "normalized": "Kutai Timur"
+  },
+  "161100": {
+    "kabupaten_id": "6409",
+    "api_name": "Kab. Penajam Paser Utara",
+    "normalized": "Penajam Paser Utara"
+  },
+  "161200": {
+    "kabupaten_id": "6411",
+    "api_name": "KAB. MAHAKAM ULU",
+    "normalized": "Mahakam ULU"
+  },
+  "166000": {
+    "kabupaten_id": "6472",
+    "api_name": "Kota Samarinda",
+    "normalized": "Samarinda"
+  },
+  "166100": {
+    "kabupaten_id": "6471",
+    "api_name": "Kota Balikpapan",
+    "normalized": "Balikpapan"
+  },
+  "166300": {
+    "kabupaten_id": "6474",
+    "api_name": "Kota Bontang",
+    "normalized": "Bontang"
+  }
+}

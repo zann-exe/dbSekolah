@@ -1,0 +1,42 @@
+{
+  "280100": {
+    "kabupaten_id": "3601",
+    "api_name": "Kab. Pandeglang",
+    "normalized": "Pandeglang"
+  },
+  "280200": {
+    "kabupaten_id": "3602",
+    "api_name": "Kab. Lebak",
+    "normalized": "Lebak"
+  },
+  "280300": {
+    "kabupaten_id": "3671",
+    "api_name": "Kab. Tangerang",
+    "normalized": "Tangerang"
+  },
+  "280400": {
+    "kabupaten_id": "3673",
+    "api_name": "Kab. Serang",
+    "normalized": "Serang"
+  },
+  "286000": {
+    "kabupaten_id": "3672",
+    "api_name": "Kota Cilegon",
+    "normalized": "Cilegon"
+  },
+  "286100": {
+    "kabupaten_id": "3671",
+    "api_name": "Kota Tangerang",
+    "normalized": "Tangerang"
+  },
+  "286200": {
+    "kabupaten_id": "3673",
+    "api_name": "Kota Serang",
+    "normalized": "Serang"
+  },
+  "286300": {
+    "kabupaten_id": "3674",
+    "api_name": "Kota tangerang Selatan",
+    "normalized": "tangerang Selatan"
+  }
+}

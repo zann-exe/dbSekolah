@@ -1,0 +1,67 @@
+{
+  "150100": {
+    "kabupaten_id": "6303",
+    "api_name": "Kab. Banjar",
+    "normalized": "Banjar"
+  },
+  "150200": {
+    "kabupaten_id": "6301",
+    "api_name": "Kab. Tanah Laut",
+    "normalized": "Tanah Laut"
+  },
+  "150300": {
+    "kabupaten_id": "6304",
+    "api_name": "Kab. Barito Kuala",
+    "normalized": "Barito Kuala"
+  },
+  "150400": {
+    "kabupaten_id": "6305",
+    "api_name": "Kab. Tapin",
+    "normalized": "Tapin"
+  },
+  "150500": {
+    "kabupaten_id": "6306",
+    "api_name": "Kab. Hulu Sungai Selatan",
+    "normalized": "Hulu Sungai Selatan"
+  },
+  "150600": {
+    "kabupaten_id": "6307",
+    "api_name": "Kab. Hulu Sungai Tengah",
+    "normalized": "Hulu Sungai Tengah"
+  },
+  "150700": {
+    "kabupaten_id": "6308",
+    "api_name": "Kab. Hulu Sungai Utara",
+    "normalized": "Hulu Sungai Utara"
+  },
+  "150800": {
+    "kabupaten_id": "6309",
+    "api_name": "Kab. Tabalong",
+    "normalized": "Tabalong"
+  },
+  "150900": {
+    "kabupaten_id": "6302",
+    "api_name": "Kab. Kota Baru",
+    "normalized": "Baru"
+  },
+  "151000": {
+    "kabupaten_id": "6311",
+    "api_name": "Kab. Balangan",
+    "normalized": "Balangan"
+  },
+  "151100": {
+    "kabupaten_id": "6310",
+    "api_name": "Kab. Tanah Bumbu",
+    "normalized": "Tanah Bumbu"
+  },
+  "156000": {
+    "kabupaten_id": "6371",
+    "api_name": "Kota Banjarmasin",
+    "normalized": "Banjarmasin"
+  },
+  "156100": {
+    "kabupaten_id": "6372",
+    "api_name": "Kota Banjarbaru",
+    "normalized": "Banjarbaru"
+  }
+}

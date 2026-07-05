@@ -1,0 +1,67 @@
+{
+  "180100": {
+    "kabupaten_id": "7201",
+    "api_name": "Kab. Banggai Kepulauan",
+    "normalized": "Banggai Kepulauan"
+  },
+  "180200": {
+    "kabupaten_id": "7205",
+    "api_name": "Kab. Donggala",
+    "normalized": "Donggala"
+  },
+  "180300": {
+    "kabupaten_id": "7204",
+    "api_name": "Kab. Poso",
+    "normalized": "Poso"
+  },
+  "180400": {
+    "kabupaten_id": "7202",
+    "api_name": "Kab. Banggai",
+    "normalized": "Banggai"
+  },
+  "180500": {
+    "kabupaten_id": "7207",
+    "api_name": "Kab. Buol",
+    "normalized": "Buol"
+  },
+  "180600": {
+    "kabupaten_id": "7206",
+    "api_name": "Kab. Tolitoli",
+    "normalized": "Tolitoli"
+  },
+  "180700": {
+    "kabupaten_id": "7203",
+    "api_name": "Kab. Morowali",
+    "normalized": "Morowali"
+  },
+  "180800": {
+    "kabupaten_id": "7208",
+    "api_name": "Kab. Parigi Moutong",
+    "normalized": "Parigi Moutong"
+  },
+  "180900": {
+    "kabupaten_id": "7209",
+    "api_name": "Kab. Tojo Una-Una",
+    "normalized": "Tojo Una-Una"
+  },
+  "181000": {
+    "kabupaten_id": "7210",
+    "api_name": "Kab. Sigi",
+    "normalized": "Sigi"
+  },
+  "181100": {
+    "kabupaten_id": "7211",
+    "api_name": "KAB. BANGGAI LAUT",
+    "normalized": "Banggai LAUT"
+  },
+  "181200": {
+    "kabupaten_id": "7212",
+    "api_name": "Kab. Morowali Utara",
+    "normalized": "Morowali Utara"
+  },
+  "186000": {
+    "kabupaten_id": "7271",
+    "api_name": "Kota Palu",
+    "normalized": "Palu"
+  }
+}

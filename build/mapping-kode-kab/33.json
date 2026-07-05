@@ -1,0 +1,177 @@
+{
+  "030300": {
+    "kabupaten_id": "3303",
+    "api_name": "Kab. Purbalingga",
+    "normalized": "Purbalingga"
+  },
+  "030600": {
+    "kabupaten_id": "3306",
+    "api_name": "Kab. Purworejo",
+    "normalized": "Purworejo"
+  },
+  "030700": {
+    "kabupaten_id": "3307",
+    "api_name": "Kab. Wonosobo",
+    "normalized": "Wonosobo"
+  },
+  "030900": {
+    "kabupaten_id": "3309",
+    "api_name": "Kab. Boyolali",
+    "normalized": "Boyolali"
+  },
+  "031000": {
+    "kabupaten_id": "3310",
+    "api_name": "Kab. Klaten",
+    "normalized": "Klaten"
+  },
+  "031400": {
+    "kabupaten_id": "3314",
+    "api_name": "Kab. Sragen",
+    "normalized": "Sragen"
+  },
+  "031500": {
+    "kabupaten_id": "3315",
+    "api_name": "Kab. Grobogan",
+    "normalized": "Grobogan"
+  },
+  "031600": {
+    "kabupaten_id": "3316",
+    "api_name": "Kab. Blora",
+    "normalized": "Blora"
+  },
+  "032600": {
+    "kabupaten_id": "3375",
+    "api_name": "Kab. Pekalongan",
+    "normalized": "Pekalongan"
+  },
+  "032700": {
+    "kabupaten_id": "3327",
+    "api_name": "Kab. Pemalang",
+    "normalized": "Pemalang"
+  },
+  "030100": {
+    "kabupaten_id": "3301",
+    "api_name": "Kab. Cilacap",
+    "normalized": "Cilacap"
+  },
+  "030200": {
+    "kabupaten_id": "3302",
+    "api_name": "Kab. Banyumas",
+    "normalized": "Banyumas"
+  },
+  "030400": {
+    "kabupaten_id": "3304",
+    "api_name": "Kab. Banjarnegara",
+    "normalized": "Banjarnegara"
+  },
+  "030500": {
+    "kabupaten_id": "3305",
+    "api_name": "Kab. Kebumen",
+    "normalized": "Kebumen"
+  },
+  "030800": {
+    "kabupaten_id": "3371",
+    "api_name": "Kab. Magelang",
+    "normalized": "Magelang"
+  },
+  "031100": {
+    "kabupaten_id": "3311",
+    "api_name": "Kab. Sukoharjo",
+    "normalized": "Sukoharjo"
+  },
+  "031200": {
+    "kabupaten_id": "3312",
+    "api_name": "Kab. Wonogiri",
+    "normalized": "Wonogiri"
+  },
+  "031300": {
+    "kabupaten_id": "3313",
+    "api_name": "Kab. Karanganyar",
+    "normalized": "Karanganyar"
+  },
+  "031700": {
+    "kabupaten_id": "3317",
+    "api_name": "Kab. Rembang",
+    "normalized": "Rembang"
+  },
+  "031800": {
+    "kabupaten_id": "3318",
+    "api_name": "Kab. Pati",
+    "normalized": "Pati"
+  },
+  "031900": {
+    "kabupaten_id": "3319",
+    "api_name": "Kab. Kudus",
+    "normalized": "Kudus"
+  },
+  "032000": {
+    "kabupaten_id": "3320",
+    "api_name": "Kab. Jepara",
+    "normalized": "Jepara"
+  },
+  "032100": {
+    "kabupaten_id": "3321",
+    "api_name": "Kab. Demak",
+    "normalized": "Demak"
+  },
+  "032200": {
+    "kabupaten_id": "3374",
+    "api_name": "Kab. Semarang",
+    "normalized": "Semarang"
+  },
+  "032300": {
+    "kabupaten_id": "3323",
+    "api_name": "Kab. Temanggung",
+    "normalized": "Temanggung"
+  },
+  "032400": {
+    "kabupaten_id": "3324",
+    "api_name": "Kab. Kendal",
+    "normalized": "Kendal"
+  },
+  "032500": {
+    "kabupaten_id": "3325",
+    "api_name": "Kab. Batang",
+    "normalized": "Batang"
+  },
+  "032800": {
+    "kabupaten_id": "3376",
+    "api_name": "Kab. Tegal",
+    "normalized": "Tegal"
+  },
+  "032900": {
+    "kabupaten_id": "3329",
+    "api_name": "Kab. Brebes",
+    "normalized": "Brebes"
+  },
+  "036000": {
+    "kabupaten_id": "3371",
+    "api_name": "Kota Magelang",
+    "normalized": "Magelang"
+  },
+  "036100": {
+    "kabupaten_id": "3372",
+    "api_name": "Kota Surakarta",
+    "normalized": "Surakarta"
+  },
+  "036200": {
+    "kabupaten_id": "3373",
+    "api_name": "Kota Salatiga",
+    "normalized": "Salatiga"
+  },
+  "036300": {
+    "kabupaten_id": "3374",
+    "api_name": "Kota Semarang",
+    "normalized": "Semarang"
+  },
+  "036400": {
+    "kabupaten_id": "3375",
+    "api_name": "Kota Pekalongan",
+    "normalized": "Pekalongan"
+  },
+  "036500": {
+    "kabupaten_id": "3376",
+    "api_name": "Kota Tegal",
+    "normalized": "Tegal"
+  }
+}

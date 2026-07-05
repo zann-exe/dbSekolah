@@ -1,0 +1,112 @@
+{
+  "240100": {
+    "kabupaten_id": "5371",
+    "api_name": "Kab. Kupang",
+    "normalized": "Kupang"
+  },
+  "240300": {
+    "kabupaten_id": "5304",
+    "api_name": "Kab. Timor Tengah Selatan",
+    "normalized": "Timor Tengah Selatan"
+  },
+  "240400": {
+    "kabupaten_id": "5305",
+    "api_name": "Kab. Timor Tengah Utara",
+    "normalized": "Timor Tengah Utara"
+  },
+  "240500": {
+    "kabupaten_id": "5306",
+    "api_name": "Kab. Belu",
+    "normalized": "Belu"
+  },
+  "240600": {
+    "kabupaten_id": "5307",
+    "api_name": "Kab. Alor",
+    "normalized": "Alor"
+  },
+  "240700": {
+    "kabupaten_id": "5309",
+    "api_name": "Kab. Flores Timur",
+    "normalized": "Flores Timur"
+  },
+  "240800": {
+    "kabupaten_id": "5310",
+    "api_name": "Kab. Sikka",
+    "normalized": "Sikka"
+  },
+  "240900": {
+    "kabupaten_id": "5311",
+    "api_name": "Kab. Ende",
+    "normalized": "Ende"
+  },
+  "241000": {
+    "kabupaten_id": "5312",
+    "api_name": "Kab. Ngada",
+    "normalized": "Ngada"
+  },
+  "241100": {
+    "kabupaten_id": "5313",
+    "api_name": "Kab. Manggarai",
+    "normalized": "Manggarai"
+  },
+  "241200": {
+    "kabupaten_id": "5302",
+    "api_name": "Kab. Sumba Timur",
+    "normalized": "Sumba Timur"
+  },
+  "241300": {
+    "kabupaten_id": "5301",
+    "api_name": "Kab. Sumba Barat",
+    "normalized": "Sumba Barat"
+  },
+  "241400": {
+    "kabupaten_id": "5308",
+    "api_name": "Kab. Lembata",
+    "normalized": "Lembata"
+  },
+  "241500": {
+    "kabupaten_id": "5314",
+    "api_name": "Kab. Rote-Ndao",
+    "normalized": "Rote-Ndao"
+  },
+  "241600": {
+    "kabupaten_id": "5315",
+    "api_name": "Kab. Manggarai Barat",
+    "normalized": "Manggarai Barat"
+  },
+  "241700": {
+    "kabupaten_id": "5318",
+    "api_name": "Kab. Nagakeo",
+    "normalized": "Nagakeo"
+  },
+  "241800": {
+    "kabupaten_id": "5316",
+    "api_name": "Kab. Sumba Tengah",
+    "normalized": "Sumba Tengah"
+  },
+  "241900": {
+    "kabupaten_id": "5317",
+    "api_name": "Kab. Sumba Barat Daya",
+    "normalized": "Sumba Barat Daya"
+  },
+  "242000": {
+    "kabupaten_id": "5319",
+    "api_name": "Kab. Manggarai Timur",
+    "normalized": "Manggarai Timur"
+  },
+  "242100": {
+    "kabupaten_id": "5320",
+    "api_name": "Kab. Sabu Raijua",
+    "normalized": "Sabu Raijua"
+  },
+  "242200": {
+    "kabupaten_id": "5321",
+    "api_name": "KAB. MALAKA",
+    "normalized": "Malaka"
+  },
+  "246000": {
+    "kabupaten_id": "5371",
+    "api_name": "Kota Kupang",
+    "normalized": "Kupang"
+  }
+}

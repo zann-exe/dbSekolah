@@ -1,0 +1,27 @@
+{
+  "340100": {
+    "kabupaten_id": "6501",
+    "api_name": "Kab. Malinau",
+    "normalized": "Malinau"
+  },
+  "340200": {
+    "kabupaten_id": "6502",
+    "api_name": "Kab. Bulungan",
+    "normalized": "Bulungan"
+  },
+  "340300": {
+    "kabupaten_id": "6503",
+    "api_name": "Kab. Tana Tidung",
+    "normalized": "Tana Tidung"
+  },
+  "340500": {
+    "kabupaten_id": "6504",
+    "api_name": "Kab. Nunukan",
+    "normalized": "Nunukan"
+  },
+  "346000": {
+    "kabupaten_id": "6571",
+    "api_name": "Kota Tarakan",
+    "normalized": "Tarakan"
+  }
+}

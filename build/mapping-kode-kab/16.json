@@ -1,0 +1,87 @@
+{
+  "110100": {
+    "kabupaten_id": "1606",
+    "api_name": "Kab. Musi Banyuasin",
+    "normalized": "Musi Banyuasin"
+  },
+  "110200": {
+    "kabupaten_id": "1602",
+    "api_name": "Kab. Ogan Komering Ilir",
+    "normalized": "Ogan Komering Ilir"
+  },
+  "110300": {
+    "kabupaten_id": "1601",
+    "api_name": "Kab. Ogan Komering Ulu",
+    "normalized": "Ogan Komering Ulu"
+  },
+  "110400": {
+    "kabupaten_id": "1603",
+    "api_name": "Kab. Muara Enim",
+    "normalized": "Muara Enim"
+  },
+  "110500": {
+    "kabupaten_id": "1604",
+    "api_name": "Kab. Lahat",
+    "normalized": "Lahat"
+  },
+  "110600": {
+    "kabupaten_id": "1605",
+    "api_name": "Kab. Musi Rawas",
+    "normalized": "Musi Rawas"
+  },
+  "110700": {
+    "kabupaten_id": "1607",
+    "api_name": "Kab. Banyuasin",
+    "normalized": "Banyuasin"
+  },
+  "110800": {
+    "kabupaten_id": "1609",
+    "api_name": "Kab. Ogan Komering Ulu Timur",
+    "normalized": "Ogan Komering Ulu Timur"
+  },
+  "110900": {
+    "kabupaten_id": "1608",
+    "api_name": "Kab. Ogan Komering Ulu Selatan",
+    "normalized": "Ogan Komering Ulu Selatan"
+  },
+  "111000": {
+    "kabupaten_id": "1610",
+    "api_name": "Kab. Ogan Ilir",
+    "normalized": "Ogan Ilir"
+  },
+  "111100": {
+    "kabupaten_id": "1611",
+    "api_name": "Kab. Empat Lawang",
+    "normalized": "Empat Lawang"
+  },
+  "111200": {
+    "kabupaten_id": "1612",
+    "api_name": "Kab. Penukal Abab Lematang Ilir",
+    "normalized": "Penukal Abab Lematang Ilir"
+  },
+  "111300": {
+    "kabupaten_id": "1613",
+    "api_name": "Kab. Musi Rawas Utara",
+    "normalized": "Musi Rawas Utara"
+  },
+  "116000": {
+    "kabupaten_id": "1671",
+    "api_name": "Kota Palembang",
+    "normalized": "Palembang"
+  },
+  "116100": {
+    "kabupaten_id": "1672",
+    "api_name": "Kota Prabumulih",
+    "normalized": "Prabumulih"
+  },
+  "116200": {
+    "kabupaten_id": "1674",
+    "api_name": "Kota Lubuk Linggau",
+    "normalized": "Lubuk Linggau"
+  },
+  "116300": {
+    "kabupaten_id": "1673",
+    "api_name": "Kota Pagar Alam",
+    "normalized": "Pagar Alam"
+  }
+}

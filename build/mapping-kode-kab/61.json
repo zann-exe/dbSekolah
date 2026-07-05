@@ -1,0 +1,72 @@
+{
+  "130100": {
+    "kabupaten_id": "6101",
+    "api_name": "Kab. Sambas",
+    "normalized": "Sambas"
+  },
+  "130200": {
+    "kabupaten_id": "6104",
+    "api_name": "Kab. Mempawah",
+    "normalized": "Mempawah"
+  },
+  "130300": {
+    "kabupaten_id": "6105",
+    "api_name": "Kab. Sanggau",
+    "normalized": "Sanggau"
+  },
+  "130400": {
+    "kabupaten_id": "6107",
+    "api_name": "Kab. Sintang",
+    "normalized": "Sintang"
+  },
+  "130500": {
+    "kabupaten_id": "6108",
+    "api_name": "Kab. Kapuas Hulu",
+    "normalized": "Kapuas Hulu"
+  },
+  "130600": {
+    "kabupaten_id": "6106",
+    "api_name": "Kab. Ketapang",
+    "normalized": "Ketapang"
+  },
+  "130800": {
+    "kabupaten_id": "6102",
+    "api_name": "Kab. Bengkayang",
+    "normalized": "Bengkayang"
+  },
+  "130900": {
+    "kabupaten_id": "6103",
+    "api_name": "Kab. Landak",
+    "normalized": "Landak"
+  },
+  "131000": {
+    "kabupaten_id": "6109",
+    "api_name": "Kab. Sekadau",
+    "normalized": "Sekadau"
+  },
+  "131100": {
+    "kabupaten_id": "6110",
+    "api_name": "Kab. Melawi",
+    "normalized": "Melawi"
+  },
+  "131200": {
+    "kabupaten_id": "6111",
+    "api_name": "Kab. Kayong Utara",
+    "normalized": "Kayong Utara"
+  },
+  "131300": {
+    "kabupaten_id": "6112",
+    "api_name": "Kab. Kuburaya",
+    "normalized": "Kuburaya"
+  },
+  "136000": {
+    "kabupaten_id": "6171",
+    "api_name": "Kota Pontianak",
+    "normalized": "Pontianak"
+  },
+  "136100": {
+    "kabupaten_id": "6172",
+    "api_name": "Kota Singkawang",
+    "normalized": "Singkawang"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "090500": {
+    "kabupaten_id": "1403",
+    "api_name": "Kab. Indragiri Hilir",
+    "normalized": "Indragiri Hilir"
+  },
+  "090800": {
+    "kabupaten_id": "1404",
+    "api_name": "Kab. Pelalawan",
+    "normalized": "Pelalawan"
+  },
+  "090900": {
+    "kabupaten_id": "1407",
+    "api_name": "Kab. Rokan Hulu",
+    "normalized": "Rokan Hulu"
+  },
+  "091400": {
+    "kabupaten_id": "1401",
+    "api_name": "Kab. Kuantan Singingi",
+    "normalized": "Kuantan Singingi"
+  },
+  "091500": {
+    "kabupaten_id": "1410",
+    "api_name": "Kab. Kepulauan Meranti",
+    "normalized": "Kepulauan Meranti"
+  },
+  "096000": {
+    "kabupaten_id": "1471",
+    "api_name": "Kota Pekanbaru",
+    "normalized": "Pekanbaru"
+  },
+  "096200": {
+    "kabupaten_id": "1473",
+    "api_name": "Kota Dumai",
+    "normalized": "Dumai"
+  },
+  "090100": {
+    "kabupaten_id": "1406",
+    "api_name": "Kab. Kampar",
+    "normalized": "Kampar"
+  },
+  "090200": {
+    "kabupaten_id": "1408",
+    "api_name": "Kab. Bengkalis",
+    "normalized": "Bengkalis"
+  },
+  "090400": {
+    "kabupaten_id": "1402",
+    "api_name": "Kab. Indragiri Hulu",
+    "normalized": "Indragiri Hulu"
+  },
+  "091000": {
+    "kabupaten_id": "1409",
+    "api_name": "Kab. Rokan Hilir",
+    "normalized": "Rokan Hilir"
+  },
+  "091100": {
+    "kabupaten_id": "1405",
+    "api_name": "Kab. Siak",
+    "normalized": "Siak"
+  }
+}

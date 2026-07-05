@@ -1,0 +1,57 @@
+{
+  "100100": {
+    "kabupaten_id": "1504",
+    "api_name": "Kab. Batang Hari",
+    "normalized": "Batang Hari"
+  },
+  "100200": {
+    "kabupaten_id": "1509",
+    "api_name": "Kab. Bungo",
+    "normalized": "Bungo"
+  },
+  "100300": {
+    "kabupaten_id": "1503",
+    "api_name": "Kab. Sarolangun",
+    "normalized": "Sarolangun"
+  },
+  "100400": {
+    "kabupaten_id": "1507",
+    "api_name": "Kab. Tanjung Jabung Barat",
+    "normalized": "Tanjung Jabung Barat"
+  },
+  "100500": {
+    "kabupaten_id": "1501",
+    "api_name": "Kab. Kerinci",
+    "normalized": "Kerinci"
+  },
+  "100600": {
+    "kabupaten_id": "1508",
+    "api_name": "Kab. Tebo",
+    "normalized": "Tebo"
+  },
+  "100700": {
+    "kabupaten_id": "1505",
+    "api_name": "Kab. Muaro Jambi",
+    "normalized": "Muaro Jambi"
+  },
+  "100800": {
+    "kabupaten_id": "1506",
+    "api_name": "Kab. Tanjung Jabung Timur",
+    "normalized": "Tanjung Jabung Timur"
+  },
+  "100900": {
+    "kabupaten_id": "1502",
+    "api_name": "Kab. Merangin",
+    "normalized": "Merangin"
+  },
+  "106000": {
+    "kabupaten_id": "1571",
+    "api_name": "Kota Jambi",
+    "normalized": "Jambi"
+  },
+  "106100": {
+    "kabupaten_id": "1572",
+    "api_name": "Kota Sungai Penuh",
+    "normalized": "Sungai Penuh"
+  }
+}

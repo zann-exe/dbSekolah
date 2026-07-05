@@ -1,0 +1,97 @@
+{
+  "080100": {
+    "kabupaten_id": "1307",
+    "api_name": "Kab. Agam",
+    "normalized": "Agam"
+  },
+  "080300": {
+    "kabupaten_id": "1308",
+    "api_name": "Kab. Lima Puluh Koto",
+    "normalized": "Lima Puluh Koto"
+  },
+  "080200": {
+    "kabupaten_id": "1309",
+    "api_name": "Kab. Pasaman",
+    "normalized": "Pasaman"
+  },
+  "080400": {
+    "kabupaten_id": "1372",
+    "api_name": "Kab. Solok",
+    "normalized": "Solok"
+  },
+  "080500": {
+    "kabupaten_id": "1306",
+    "api_name": "Kab. Padang Pariaman",
+    "normalized": "Padang Pariaman"
+  },
+  "080600": {
+    "kabupaten_id": "1302",
+    "api_name": "Kab. Pesisir Selatan",
+    "normalized": "Pesisir Selatan"
+  },
+  "081000": {
+    "kabupaten_id": "1301",
+    "api_name": "Kab. Kepulauan Mentawai",
+    "normalized": "Kepulauan Mentawai"
+  },
+  "081100": {
+    "kabupaten_id": "1310",
+    "api_name": "Kab. Solok Selatan",
+    "normalized": "Solok Selatan"
+  },
+  "081300": {
+    "kabupaten_id": "1312",
+    "api_name": "Kab. Pasaman Barat",
+    "normalized": "Pasaman Barat"
+  },
+  "081200": {
+    "kabupaten_id": "1311",
+    "api_name": "Kab. Dharmasraya",
+    "normalized": "Dharmasraya"
+  },
+  "086100": {
+    "kabupaten_id": "1371",
+    "api_name": "Kota Padang",
+    "normalized": "Padang"
+  },
+  "086000": {
+    "kabupaten_id": "1375",
+    "api_name": "Kota Bukittinggi",
+    "normalized": "Bukittinggi"
+  },
+  "080700": {
+    "kabupaten_id": "1305",
+    "api_name": "Kab. Tanah Datar",
+    "normalized": "Tanah Datar"
+  },
+  "080800": {
+    "kabupaten_id": "1304",
+    "api_name": "Kab. Sijunjung",
+    "normalized": "Sijunjung"
+  },
+  "086500": {
+    "kabupaten_id": "1376",
+    "api_name": "Kota Payakumbuh",
+    "normalized": "Payakumbuh"
+  },
+  "086200": {
+    "kabupaten_id": "1374",
+    "api_name": "Kota Padang Panjang",
+    "normalized": "Padang Panjang"
+  },
+  "086300": {
+    "kabupaten_id": "1373",
+    "api_name": "Kota Sawah Lunto",
+    "normalized": "Sawah Lunto"
+  },
+  "086400": {
+    "kabupaten_id": "1372",
+    "api_name": "Kota Solok",
+    "normalized": "Solok"
+  },
+  "086600": {
+    "kabupaten_id": "1377",
+    "api_name": "Kota Pariaman",
+    "normalized": "Pariaman"
+  }
+}

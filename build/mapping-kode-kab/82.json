@@ -1,0 +1,52 @@
+{
+  "270100": {
+    "kabupaten_id": "8208",
+    "api_name": "KAB. PULAU TALIABU",
+    "normalized": "Pulau Taliabu"
+  },
+  "270200": {
+    "kabupaten_id": "8202",
+    "api_name": "Kab. Halmahera Tengah",
+    "normalized": "Halmahera Tengah"
+  },
+  "270300": {
+    "kabupaten_id": "8201",
+    "api_name": "Kab. Halmahera Barat",
+    "normalized": "Halmahera Barat"
+  },
+  "270400": {
+    "kabupaten_id": "8205",
+    "api_name": "Kab. halmahera Utara",
+    "normalized": "halmahera Utara"
+  },
+  "270500": {
+    "kabupaten_id": "8204",
+    "api_name": "Kab. Halmahera Selatan",
+    "normalized": "Halmahera Selatan"
+  },
+  "270600": {
+    "kabupaten_id": "8206",
+    "api_name": "Kab. Halmahera Timur",
+    "normalized": "Halmahera Timur"
+  },
+  "270700": {
+    "kabupaten_id": "8203",
+    "api_name": "Kab. Kepulauan Sula",
+    "normalized": "Kepulauan Sula"
+  },
+  "270800": {
+    "kabupaten_id": "8207",
+    "api_name": "Kab. Kepulauan Morotai",
+    "normalized": "Kepulauan Morotai"
+  },
+  "276000": {
+    "kabupaten_id": "8271",
+    "api_name": "Kota Ternate",
+    "normalized": "Ternate"
+  },
+  "276100": {
+    "kabupaten_id": "8272",
+    "api_name": "Kota Tidore Kepulauan",
+    "normalized": "Tidore Kepulauan"
+  }
+}

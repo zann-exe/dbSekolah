@@ -1,0 +1,167 @@
+{
+  "070100": {
+    "kabupaten_id": "1212",
+    "api_name": "Kab. Deli Serdang",
+    "normalized": "Deli Serdang"
+  },
+  "070300": {
+    "kabupaten_id": "1211",
+    "api_name": "Kab. Karo",
+    "normalized": "Karo"
+  },
+  "070400": {
+    "kabupaten_id": "1209",
+    "api_name": "Kab. Simalungun",
+    "normalized": "Simalungun"
+  },
+  "070500": {
+    "kabupaten_id": "1210",
+    "api_name": "Kab. Dairi",
+    "normalized": "Dairi"
+  },
+  "071000": {
+    "kabupaten_id": "1203",
+    "api_name": "Kab. Tapanuli Selatan",
+    "normalized": "Tapanuli Selatan"
+  },
+  "071600": {
+    "kabupaten_id": "1206",
+    "api_name": "Kab. Toba Samosir",
+    "normalized": "Toba Samosir"
+  },
+  "071700": {
+    "kabupaten_id": "1214",
+    "api_name": "Kab. Nias Selatan",
+    "normalized": "Nias Selatan"
+  },
+  "071900": {
+    "kabupaten_id": "1215",
+    "api_name": "Kab. Humbang Hasudutan",
+    "normalized": "Humbang Hasudutan"
+  },
+  "072000": {
+    "kabupaten_id": "1217",
+    "api_name": "Kab. Samosir",
+    "normalized": "Samosir"
+  },
+  "072100": {
+    "kabupaten_id": "1218",
+    "api_name": "Kab. Serdang Bedagai",
+    "normalized": "Serdang Bedagai"
+  },
+  "072500": {
+    "kabupaten_id": "1223",
+    "api_name": "Kab. Labuhan Batu Utara",
+    "normalized": "Labuhan Batu Utara"
+  },
+  "072600": {
+    "kabupaten_id": "1222",
+    "api_name": "Kab. Labuhan Batu Selatan",
+    "normalized": "Labuhan Batu Selatan"
+  },
+  "072700": {
+    "kabupaten_id": "1225",
+    "api_name": "Kab. Nias Barat",
+    "normalized": "Nias Barat"
+  },
+  "076400": {
+    "kabupaten_id": "1272",
+    "api_name": "Kota Tanjung Balai",
+    "normalized": "Tanjung Balai"
+  },
+  "076600": {
+    "kabupaten_id": "1277",
+    "api_name": "Kota Padang Sidimpuan",
+    "normalized": "Padang Sidimpuan"
+  },
+  "076500": {
+    "kabupaten_id": "1271",
+    "api_name": "Kota Sibolga",
+    "normalized": "Sibolga"
+  },
+  "076700": {
+    "kabupaten_id": "1278",
+    "api_name": "Kota Gunungsitoli",
+    "normalized": "Gunungsitoli"
+  },
+  "070200": {
+    "kabupaten_id": "1213",
+    "api_name": "Kab. Langkat",
+    "normalized": "Langkat"
+  },
+  "070600": {
+    "kabupaten_id": "1208",
+    "api_name": "Kab. Asahan",
+    "normalized": "Asahan"
+  },
+  "070700": {
+    "kabupaten_id": "1207",
+    "api_name": "Kab. Labuhan Batu",
+    "normalized": "Labuhan Batu"
+  },
+  "070800": {
+    "kabupaten_id": "1205",
+    "api_name": "Kab. Tapanuli Utara",
+    "normalized": "Tapanuli Utara"
+  },
+  "070900": {
+    "kabupaten_id": "1204",
+    "api_name": "Kab. Tapanuli Tengah",
+    "normalized": "Tapanuli Tengah"
+  },
+  "071100": {
+    "kabupaten_id": "1201",
+    "api_name": "Kab. Nias",
+    "normalized": "Nias"
+  },
+  "071500": {
+    "kabupaten_id": "1202",
+    "api_name": "Kab. Mandailing Natal",
+    "normalized": "Mandailing Natal"
+  },
+  "072200": {
+    "kabupaten_id": "1219",
+    "api_name": "Kab. Batubara",
+    "normalized": "Batubara"
+  },
+  "071800": {
+    "kabupaten_id": "1216",
+    "api_name": "Kab. Pakpak Bharat",
+    "normalized": "Pakpak Bharat"
+  },
+  "072300": {
+    "kabupaten_id": "1220",
+    "api_name": "Kab. Padang Lawas utara",
+    "normalized": "Padang Lawas utara"
+  },
+  "072400": {
+    "kabupaten_id": "1221",
+    "api_name": "Kab. Padang Lawas",
+    "normalized": "Padang Lawas"
+  },
+  "072800": {
+    "kabupaten_id": "1224",
+    "api_name": "Kab. Nias Utara",
+    "normalized": "Nias Utara"
+  },
+  "076000": {
+    "kabupaten_id": "1275",
+    "api_name": "Kota Medan",
+    "normalized": "Medan"
+  },
+  "076100": {
+    "kabupaten_id": "1276",
+    "api_name": "Kota Binjai",
+    "normalized": "Binjai"
+  },
+  "076200": {
+    "kabupaten_id": "1274",
+    "api_name": "Kota Tebing Tinggi",
+    "normalized": "Tebing Tinggi"
+  },
+  "076300": {
+    "kabupaten_id": "1273",
+    "api_name": "Kota Pematangsiantar",
+    "normalized": "Pematangsiantar"
+  }
+}

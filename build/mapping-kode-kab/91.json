@@ -1,0 +1,67 @@
+{
+  "320100": {
+    "kabupaten_id": "9101",
+    "api_name": "Kab. Fak-Fak",
+    "normalized": "Fak-Fak"
+  },
+  "320200": {
+    "kabupaten_id": "9102",
+    "api_name": "Kab. Kaimana",
+    "normalized": "Kaimana"
+  },
+  "320300": {
+    "kabupaten_id": "9103",
+    "api_name": "Kab. Teluk Wondama",
+    "normalized": "Teluk Wondama"
+  },
+  "320400": {
+    "kabupaten_id": "9104",
+    "api_name": "Kab. Teluk Bintuni",
+    "normalized": "Teluk Bintuni"
+  },
+  "320500": {
+    "kabupaten_id": "9105",
+    "api_name": "Kab. Manokwari",
+    "normalized": "Manokwari"
+  },
+  "320600": {
+    "kabupaten_id": "9106",
+    "api_name": "Kab. Sorong Selatan",
+    "normalized": "Sorong Selatan"
+  },
+  "320700": {
+    "kabupaten_id": "9171",
+    "api_name": "Kab. Sorong",
+    "normalized": "Sorong"
+  },
+  "320800": {
+    "kabupaten_id": "9108",
+    "api_name": "Kab. Raja Ampat",
+    "normalized": "Raja Ampat"
+  },
+  "320900": {
+    "kabupaten_id": "9109",
+    "api_name": "Kab. Tambrauw",
+    "normalized": "Tambrauw"
+  },
+  "321000": {
+    "kabupaten_id": "9110",
+    "api_name": "Kab. Maybrat",
+    "normalized": "Maybrat"
+  },
+  "321100": {
+    "kabupaten_id": "9112",
+    "api_name": "Kab. Pegunungan Arfak",
+    "normalized": "Pegunungan Arfak"
+  },
+  "321200": {
+    "kabupaten_id": "9111",
+    "api_name": "Kab. Manokwari Selatan",
+    "normalized": "Manokwari Selatan"
+  },
+  "326000": {
+    "kabupaten_id": "9171",
+    "api_name": "Kota Sorong",
+    "normalized": "Sorong"
+  }
+}

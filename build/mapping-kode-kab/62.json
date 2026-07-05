@@ -1,0 +1,72 @@
+{
+  "140100": {
+    "kabupaten_id": "6203",
+    "api_name": "Kab. Kapuas",
+    "normalized": "Kapuas"
+  },
+  "140200": {
+    "kabupaten_id": "6204",
+    "api_name": "Kab. Barito Selatan",
+    "normalized": "Barito Selatan"
+  },
+  "140300": {
+    "kabupaten_id": "6205",
+    "api_name": "Kab. Barito Utara",
+    "normalized": "Barito Utara"
+  },
+  "140400": {
+    "kabupaten_id": "6202",
+    "api_name": "Kab. Kotawaringin Timur",
+    "normalized": "Kotawaringin Timur"
+  },
+  "140500": {
+    "kabupaten_id": "6201",
+    "api_name": "Kab. Kotawaringin Barat",
+    "normalized": "Kotawaringin Barat"
+  },
+  "140600": {
+    "kabupaten_id": "6209",
+    "api_name": "Kab. Katingan",
+    "normalized": "Katingan"
+  },
+  "140700": {
+    "kabupaten_id": "6208",
+    "api_name": "Kab. Seruyan",
+    "normalized": "Seruyan"
+  },
+  "140800": {
+    "kabupaten_id": "6206",
+    "api_name": "Kab. Sukamara",
+    "normalized": "Sukamara"
+  },
+  "140900": {
+    "kabupaten_id": "6207",
+    "api_name": "Kab. Lamandau",
+    "normalized": "Lamandau"
+  },
+  "141000": {
+    "kabupaten_id": "6211",
+    "api_name": "Kab. Gunung Mas",
+    "normalized": "Gunung Mas"
+  },
+  "141100": {
+    "kabupaten_id": "6210",
+    "api_name": "Kab. Pulang Pisau",
+    "normalized": "Pulang Pisau"
+  },
+  "141200": {
+    "kabupaten_id": "6213",
+    "api_name": "Kab. Murung Raya",
+    "normalized": "Murung Raya"
+  },
+  "141300": {
+    "kabupaten_id": "6212",
+    "api_name": "Kab. Barito Timur",
+    "normalized": "Barito Timur"
+  },
+  "146000": {
+    "kabupaten_id": "6271",
+    "api_name": "Kota Palangka Raya",
+    "normalized": "Palangka Raya"
+  }
+}

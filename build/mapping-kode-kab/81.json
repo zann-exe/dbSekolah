@@ -1,0 +1,57 @@
+{
+  "210100": {
+    "kabupaten_id": "8103",
+    "api_name": "Kab. Maluku Tengah",
+    "normalized": "Maluku Tengah"
+  },
+  "210200": {
+    "kabupaten_id": "8102",
+    "api_name": "Kab. Maluku Tenggara",
+    "normalized": "Maluku Tenggara"
+  },
+  "210300": {
+    "kabupaten_id": "8104",
+    "api_name": "Kab. Buru",
+    "normalized": "Buru"
+  },
+  "210400": {
+    "kabupaten_id": "8101",
+    "api_name": "Kab. Maluku Tenggara Barat",
+    "normalized": "Maluku Tenggara Barat"
+  },
+  "210500": {
+    "kabupaten_id": "8106",
+    "api_name": "Kab. Seram Bagian Barat",
+    "normalized": "Seram Bagian Barat"
+  },
+  "210600": {
+    "kabupaten_id": "8107",
+    "api_name": "Kab. Seram Bagian Timur",
+    "normalized": "Seram Bagian Timur"
+  },
+  "210700": {
+    "kabupaten_id": "8105",
+    "api_name": "Kab. Kepulauan Aru",
+    "normalized": "Kepulauan Aru"
+  },
+  "210800": {
+    "kabupaten_id": "8108",
+    "api_name": "Kab. Maluku Barat Daya",
+    "normalized": "Maluku Barat Daya"
+  },
+  "210900": {
+    "kabupaten_id": "8109",
+    "api_name": "Kab. Buru Selatan",
+    "normalized": "Buru Selatan"
+  },
+  "216000": {
+    "kabupaten_id": "8171",
+    "api_name": "Kota Ambon",
+    "normalized": "Ambon"
+  },
+  "216100": {
+    "kabupaten_id": "8172",
+    "api_name": "Kota Tual",
+    "normalized": "Tual"
+  }
+}

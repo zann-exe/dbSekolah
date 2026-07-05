@@ -1,0 +1,52 @@
+{
+  "260100": {
+    "kabupaten_id": "1703",
+    "api_name": "Kab. Bengkulu Utara",
+    "normalized": "Bengkulu Utara"
+  },
+  "260200": {
+    "kabupaten_id": "1702",
+    "api_name": "Kab. Rejang Lebong",
+    "normalized": "Rejang Lebong"
+  },
+  "260300": {
+    "kabupaten_id": "1701",
+    "api_name": "Kab. Bengkulu Selatan",
+    "normalized": "Bengkulu Selatan"
+  },
+  "260400": {
+    "kabupaten_id": "1706",
+    "api_name": "Kab. Muko-muko",
+    "normalized": "Muko-muko"
+  },
+  "260500": {
+    "kabupaten_id": "1708",
+    "api_name": "Kab. Kepahiang",
+    "normalized": "Kepahiang"
+  },
+  "260600": {
+    "kabupaten_id": "1707",
+    "api_name": "Kab. Lebong",
+    "normalized": "Lebong"
+  },
+  "260700": {
+    "kabupaten_id": "1704",
+    "api_name": "Kab. Kaur",
+    "normalized": "Kaur"
+  },
+  "260800": {
+    "kabupaten_id": "1705",
+    "api_name": "Kab. Seluma",
+    "normalized": "Seluma"
+  },
+  "260900": {
+    "kabupaten_id": "1709",
+    "api_name": "Kab. Bengkulu Tengah",
+    "normalized": "Bengkulu Tengah"
+  },
+  "266000": {
+    "kabupaten_id": "1771",
+    "api_name": "Kota Bengkulu",
+    "normalized": "Bengkulu"
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "050300": {
+    "kabupaten_id": "3576",
+    "api_name": "Kab. Mojokerto",
+    "normalized": "Mojokerto"
+  },
+  "050400": {
+    "kabupaten_id": "3517",
+    "api_name": "Kab. Jombang",
+    "normalized": "Jombang"
+  },
+  "051200": {
+    "kabupaten_id": "3501",
+    "api_name": "Kab. Pacitan",
+    "normalized": "Pacitan"
+  },
+  "051300": {
+    "kabupaten_id": "3571",
+    "api_name": "Kab. Kediri",
+    "normalized": "Kediri"
+  },
+  "051500": {
+    "kabupaten_id": "3572",
+    "api_name": "Kab. Blitar",
+    "normalized": "Blitar"
+  },
+  "051600": {
+    "kabupaten_id": "3504",
+    "api_name": "Kab. Tulungagung",
+    "normalized": "Tulungagung"
+  },
+  "052000": {
+    "kabupaten_id": "3574",
+    "api_name": "Kab. Probolinggo",
+    "normalized": "Probolinggo"
+  },
+  "052300": {
+    "kabupaten_id": "3512",
+    "api_name": "Kab. Situbondo",
+    "normalized": "Situbondo"
+  },
+  "052400": {
+    "kabupaten_id": "3509",
+    "api_name": "Kab. Jember",
+    "normalized": "Jember"
+  },
+  "052500": {
+    "kabupaten_id": "3510",
+    "api_name": "Kab. Banyuwangi",
+    "normalized": "Banyuwangi"
+  },
+  "052600": {
+    "kabupaten_id": "3528",
+    "api_name": "Kab. Pamekasan",
+    "normalized": "Pamekasan"
+  },
+  "052900": {
+    "kabupaten_id": "3526",
+    "api_name": "Kab. Bangkalan",
+    "normalized": "Bangkalan"
+  },
+  "050100": {
+    "kabupaten_id": "3525",
+    "api_name": "Kab. Gresik",
+    "normalized": "Gresik"
+  },
+  "050200": {
+    "kabupaten_id": "3515",
+    "api_name": "Kab. Sidoarjo",
+    "normalized": "Sidoarjo"
+  },
+  "050500": {
+    "kabupaten_id": "3522",
+    "api_name": "Kab. Bojonegoro",
+    "normalized": "Bojonegoro"
+  },
+  "050600": {
+    "kabupaten_id": "3523",
+    "api_name": "Kab. Tuban",
+    "normalized": "Tuban"
+  },
+  "050700": {
+    "kabupaten_id": "3524",
+    "api_name": "Kab. Lamongan",
+    "normalized": "Lamongan"
+  },
+  "050800": {
+    "kabupaten_id": "3577",
+    "api_name": "Kab. Madiun",
+    "normalized": "Madiun"
+  },
+  "050900": {
+    "kabupaten_id": "3521",
+    "api_name": "Kab. Ngawi",
+    "normalized": "Ngawi"
+  },
+  "051000": {
+    "kabupaten_id": "3520",
+    "api_name": "Kab. Magetan",
+    "normalized": "Magetan"
+  },
+  "051100": {
+    "kabupaten_id": "3502",
+    "api_name": "Kab. Ponorogo",
+    "normalized": "Ponorogo"
+  },
+  "051400": {
+    "kabupaten_id": "3518",
+    "api_name": "Kab. Nganjuk",
+    "normalized": "Nganjuk"
+  },
+  "051700": {
+    "kabupaten_id": "3503",
+    "api_name": "Kab. Trenggalek",
+    "normalized": "Trenggalek"
+  },
+  "051800": {
+    "kabupaten_id": "3573",
+    "api_name": "Kab. Malang",
+    "normalized": "Malang"
+  },
+  "051900": {
+    "kabupaten_id": "3575",
+    "api_name": "Kab. Pasuruan",
+    "normalized": "Pasuruan"
+  },
+  "052100": {
+    "kabupaten_id": "3508",
+    "api_name": "Kab. Lumajang",
+    "normalized": "Lumajang"
+  },
+  "052200": {
+    "kabupaten_id": "3511",
+    "api_name": "Kab. Bondowoso",
+    "normalized": "Bondowoso"
+  },
+  "052700": {
+    "kabupaten_id": "3527",
+    "api_name": "Kab. Sampang",
+    "normalized": "Sampang"
+  },
+  "052800": {
+    "kabupaten_id": "3529",
+    "api_name": "Kab. Sumenep",
+    "normalized": "Sumenep"
+  },
+  "056000": {
+    "kabupaten_id": "3578",
+    "api_name": "Kota Surabaya",
+    "normalized": "Surabaya"
+  },
+  "056100": {
+    "kabupaten_id": "3573",
+    "api_name": "Kota Malang",
+    "normalized": "Malang"
+  },
+  "056200": {
+    "kabupaten_id": "3577",
+    "api_name": "Kota Madiun",
+    "normalized": "Madiun"
+  },
+  "056300": {
+    "kabupaten_id": "3571",
+    "api_name": "Kota Kediri",
+    "normalized": "Kediri"
+  },
+  "056400": {
+    "kabupaten_id": "3576",
+    "api_name": "Kota Mojokerto",
+    "normalized": "Mojokerto"
+  },
+  "056600": {
+    "kabupaten_id": "3575",
+    "api_name": "Kota Pasuruan",
+    "normalized": "Pasuruan"
+  },
+  "056500": {
+    "kabupaten_id": "3572",
+    "api_name": "Kota Blitar",
+    "normalized": "Blitar"
+  },
+  "056700": {
+    "kabupaten_id": "3574",
+    "api_name": "Kota Probolinggo",
+    "normalized": "Probolinggo"
+  },
+  "056800": {
+    "kabupaten_id": "3579",
+    "api_name": "Kota Batu",
+    "normalized": "Batu"
+  }
+}

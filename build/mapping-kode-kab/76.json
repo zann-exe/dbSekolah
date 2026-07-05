@@ -1,0 +1,32 @@
+{
+  "330100": {
+    "kabupaten_id": "7604",
+    "api_name": "Kab. Mamuju",
+    "normalized": "Mamuju"
+  },
+  "330200": {
+    "kabupaten_id": "7605",
+    "api_name": "Kab. Mamuju Utara",
+    "normalized": "Mamuju Utara"
+  },
+  "330300": {
+    "kabupaten_id": "7602",
+    "api_name": "Kab. Polewali Mandar",
+    "normalized": "Polewali Mandar"
+  },
+  "330400": {
+    "kabupaten_id": "7603",
+    "api_name": "Kab. Mamasa",
+    "normalized": "Mamasa"
+  },
+  "330500": {
+    "kabupaten_id": "7601",
+    "api_name": "Kab. Majene",
+    "normalized": "Majene"
+  },
+  "330600": {
+    "kabupaten_id": "7606",
+    "api_name": "KAB. MAMUJU TENGAH",
+    "normalized": "Mamuju Tengah"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "020500": {
+    "kabupaten_id": "3271",
+    "api_name": "Kab. Bogor",
+    "normalized": "Bogor"
+  },
+  "020800": {
+    "kabupaten_id": "3273",
+    "api_name": "Kab. Bandung",
+    "normalized": "Bandung"
+  },
+  "021000": {
+    "kabupaten_id": "3211",
+    "api_name": "Kab. Sumedang",
+    "normalized": "Sumedang"
+  },
+  "021100": {
+    "kabupaten_id": "3205",
+    "api_name": "Kab. Garut",
+    "normalized": "Garut"
+  },
+  "021500": {
+    "kabupaten_id": "3208",
+    "api_name": "Kab. Kuningan",
+    "normalized": "Kuningan"
+  },
+  "021700": {
+    "kabupaten_id": "3274",
+    "api_name": "Kab. Cirebon",
+    "normalized": "Cirebon"
+  },
+  "022100": {
+    "kabupaten_id": "3215",
+    "api_name": "Kab. Karawang",
+    "normalized": "Karawang"
+  },
+  "022200": {
+    "kabupaten_id": "3275",
+    "api_name": "Kab. Bekasi",
+    "normalized": "Bekasi"
+  },
+  "022300": {
+    "kabupaten_id": "3217",
+    "api_name": "Kab. Bandung Barat",
+    "normalized": "Bandung Barat"
+  },
+  "022500": {
+    "kabupaten_id": "3218",
+    "api_name": "KAB. PANGANDARAN",
+    "normalized": "Pangandaran"
+  },
+  "026000": {
+    "kabupaten_id": "3273",
+    "api_name": "Kota Bandung",
+    "normalized": "Bandung"
+  },
+  "020600": {
+    "kabupaten_id": "3272",
+    "api_name": "Kab. Sukabumi",
+    "normalized": "Sukabumi"
+  },
+  "020700": {
+    "kabupaten_id": "3203",
+    "api_name": "Kab. Cianjur",
+    "normalized": "Cianjur"
+  },
+  "021200": {
+    "kabupaten_id": "3278",
+    "api_name": "Kab. Tasikmalaya",
+    "normalized": "Tasikmalaya"
+  },
+  "021400": {
+    "kabupaten_id": "3207",
+    "api_name": "Kab. Ciamis",
+    "normalized": "Ciamis"
+  },
+  "021600": {
+    "kabupaten_id": "3210",
+    "api_name": "Kab. Majalengka",
+    "normalized": "Majalengka"
+  },
+  "021800": {
+    "kabupaten_id": "3212",
+    "api_name": "Kab. Indramayu",
+    "normalized": "Indramayu"
+  },
+  "021900": {
+    "kabupaten_id": "3213",
+    "api_name": "Kab. Subang",
+    "normalized": "Subang"
+  },
+  "022000": {
+    "kabupaten_id": "3214",
+    "api_name": "Kab. Purwakarta",
+    "normalized": "Purwakarta"
+  },
+  "026100": {
+    "kabupaten_id": "3271",
+    "api_name": "Kota Bogor",
+    "normalized": "Bogor"
+  },
+  "026200": {
+    "kabupaten_id": "3272",
+    "api_name": "Kota Sukabumi",
+    "normalized": "Sukabumi"
+  },
+  "026300": {
+    "kabupaten_id": "3274",
+    "api_name": "Kota Cirebon",
+    "normalized": "Cirebon"
+  },
+  "026500": {
+    "kabupaten_id": "3275",
+    "api_name": "Kota Bekasi",
+    "normalized": "Bekasi"
+  },
+  "026600": {
+    "kabupaten_id": "3276",
+    "api_name": "Kota Depok",
+    "normalized": "Depok"
+  },
+  "026700": {
+    "kabupaten_id": "3277",
+    "api_name": "Kota Cimahi",
+    "normalized": "Cimahi"
+  },
+  "026800": {
+    "kabupaten_id": "3278",
+    "api_name": "Kota Tasikmalaya",
+    "normalized": "Tasikmalaya"
+  },
+  "026900": {
+    "kabupaten_id": "3279",
+    "api_name": "Kota Banjar",
+    "normalized": "Banjar"
+  }
+}
