@@ -383,12 +383,13 @@ User ketik nama sekolah → filter cached data by sekah.includes(query)
 - [ ] Verifikasi "sma negeri 1" di Jakarta muncul dengan benar
 
 ### Phase 5: Perguruan Tinggi (PDDikti Data)
-- [ ] Riset API PDDikti (`pddikti.kemdikbud.go.id`) — lihat Section 14
-- [ ] `fetch-pt.js` — download data perguruan tinggi dari PDDikti API
-- [ ] `normalize-pt.js` — normalisasi struktur data PT
-- [ ] `data/perguruan-tinggi/{provinsi_id}.json` — output per provinsi
-- [ ] `data/index/pt-by-kode.json` — index kode PT → {provinsi_id, kabupaten_id}
-- [ ] `validate-pt.js` — validasi data PT (kode duplikat, wilayah match, koordinat)
+- [x] Riset API PDDikti (`pddikti.kemdikbud.go.id`) — lihat Section 14
+- [x] `build/fetch-pt.js` — download data perguruan tinggi dari GitHub mirror
+- [x] `build/normalize-pt.js` — normalisasi struktur data PT (6.600 PT unik, mapping provinsi ~95,7%)
+- [x] `data/perguruan-tinggi/{provinsi_id}.json` — output per provinsi (34 file)
+- [x] `data/perguruan-tinggi/all-pt.json` — output seluruh PT
+- [x] `data/index/pt-by-kode.json` — index kode PT → {provinsi_id, kabupaten_id, nama_pt}
+- [x] `build/validate-pt.js` — validasi data PT (kode duplikat, wilayah match)
 - [ ] Update `docs/SCHEMA.md` dengan skema data perguruan tinggi
 - [ ] Integrasi GenLog: tambah dropdown/search perguruan tinggi di profile
 
@@ -477,11 +478,12 @@ Agent yang akan mengimplementasikan blueprint ini WAJIB memenuhi semua checklist
 - [ ] Test: NPSN search untuk sekolah swasta (mis. Al Azhar) → hasil muncul
 
 ### Perguruan Tinggi (Phase 5)
-- [ ] `fetch-pt.js` download data PT dari PDDikti API
-- [ ] `normalize-pt.js` normalisasi struktur data PT
-- [ ] `data/perguruan-tinggi/{provinsi_id}.json` untuk semua 34 provinsi
-- [ ] `data/index/pt-by-kode.json` generated
-- [ ] `validate-pt.js` validasi data PT
+- [x] `build/fetch-pt.js` download data PT dari GitHub mirror
+- [x] `build/normalize-pt.js` normalisasi struktur data PT
+- [x] `data/perguruan-tinggi/{provinsi_id}.json` untuk 34 provinsi ter-mapping
+- [x] `data/perguruan-tinggi/all-pt.json` generated
+- [x] `data/index/pt-by-kode.json` generated
+- [x] `build/validate-pt.js` validasi data PT
 - [ ] `docs/SCHEMA.md` diupdate dengan skema PT
 - [ ] Integrasi GenLog: search perguruan tinggi di profile
 
@@ -508,50 +510,62 @@ Data sekolah K-12 (SD–SMA/SMK) berasal dari Dapodik. Perguruan tinggi dikelola
 - Portal: `https://pddikti.kemdikbud.go.id`
 - Admin: `https://pddikti-admin.kemdikbud.go.id`
 - Endpoint pencarian PT: `https://pddikti.kemdikbud.go.id/pt`
+- **Endpoint list all PT**: `https://api-frontend.kemdikbud.go.id/loadpt` — mengembalikan seluruh daftar PT (10.219 records, termasuk PT luar negeri). Endpoint ini tidak terdokumentasi secara publik tetapi digunakan oleh frontend PDDikti.
+
+**GitHub mirror** (community-maintained, data diperbarui setiap hari):
+- Repo: `https://github.com/mzakiyuddin/daftar-perguruan-tinggi-indonesia`
+- JSON: `https://raw.githubusercontent.com/mzakiyuddin/daftar-perguruan-tinggi-indonesia/main/data/data.json`
+- CSV: `https://raw.githubusercontent.com/mzakiyuddin/daftar-perguruan-tinggi-indonesia/main/data/data.csv`
+- Excel: `https://raw.githubusercontent.com/mzakiyuddin/daftar-perguruan-tinggi-indonesia/main/data/data.xlsx`
+- Digunakan sebagai sumber fetch untuk project ini karena lebih stabil dan menyediakan list all PT (tidak seperti API wrapper yang hanya search by keyword).
 
 ### 14.3 Statistik PDDikti
 
 Berdasarkan query API (2026-07-06):
-- **Total perguruan tinggi**: 4,416 PT
-- **Distribusi per provinsi** (endpoint `/api/stats/pt-count-province/`):
+- **Total perguruan tinggi aktif** (API wrapper): 4,416 PT
+- **Total records** (API resmi frontend `loadpt` / GitHub mirror): 10.219 records (termasuk PT luar negeri dan historis)
+- **Total PT Indonesia unik** setelah filter & normalize: 6,600 PT
+- **PT dengan provinsi ter-mapping**: 6,318 (~95,7%)
+- **PT unmapped**: 282 (~4,3%, mayoritas STT/STAI tanpa nama kota)
+- **Distribusi per provinsi** (hasil normalize):
 
 | Provinsi                    | Jumlah PT |
 |-----------------------------|-----------|
-| Jawa Barat                  | 877       |
-| Jawa Timur                  | 810       |
-| DKI Jakarta                 | 565       |
-| Jawa Tengah                 | 555       |
-| Sumatera Utara              | 514       |
-| Sulawesi Selatan            | 369       |
-| Banten                      | 246       |
-| DI Yogyakarta               | 207       |
-| Sumatera Selatan            | 207       |
-| Aceh                        | 203       |
-| Sumatera Barat              | 186       |
-| Lampung                     | 169       |
-| Riau                        | 160       |
-| Sulawesi Utara              | 118       |
-| Bali                        | 110       |
-| Papua                       | 110       |
-| Kalimantan Timur            | 106       |
-| Kalimantan Barat            | 106       |
-| Nusa Tenggara Timur         | 105       |
-| Jambi                       | 102       |
-| Kalimantan Selatan          | 94        |
-| Sulawesi Tenggara           | 93        |
-| Kepulauan Riau              | 84        |
-| Sulawesi Tengah             | 67        |
-| Maluku                      | 54        |
-| Kalimantan Tengah           | 50        |
-| Papua Barat                 | 48        |
-| Sulawesi Barat              | 45        |
-| Bengkulu                    | 37        |
-| Maluku Utara                | 37        |
-| Bangka Belitung             | 33        |
-| Gorontalo                   | 25        |
-| Nusa Tenggara Barat         | 123       |
-| Kalimantan Utara            | 16        |
-| Data Tidak Ada              | 2         |
+| JAWA BARAT                  | 949       |
+| JAWA TIMUR                  | 743       |
+| JAWA TENGAH                 | 591       |
+| DKI JAKARTA                 | 556       |
+| SUMATERA UTARA              | 484       |
+| SUMATERA BARAT              | 354       |
+| SULAWESI SELATAN            | 312       |
+| KALIMANTAN TIMUR            | 278       |
+| SUMATERA SELATAN            | 261       |
+| DI YOGYAKARTA               | 204       |
+| ACEH                        | 185       |
+| SULAWESI BARAT              | 167       |
+| NUSA TENGGARA BARAT         | 145       |
+| RIAU                        | 122       |
+| LAMPUNG                     | 114       |
+| PAPUA BARAT                 | 112       |
+| SULAWESI UTARA              | 103       |
+| NUSA TENGGARA TIMUR         | 100       |
+| BALI                        | 83        |
+| JAMBI                       | 66        |
+| GORONTALO                   | 62        |
+| MALUKU                      | 51        |
+| BANTEN                      | 40        |
+| MALUKU UTARA                | 38        |
+| KEPULAUAN RIAU              | 37        |
+| KALIMANTAN BARAT            | 29        |
+| PAPUA                       | 27        |
+| SULAWESI TENGAH             | 21        |
+| KEPULAUAN BANGKA BELITUNG   | 20        |
+| KALIMANTAN SELATAN          | 19        |
+| SULAWESI TENGGARA           | 18        |
+| KALIMANTAN TENGAH           | 13        |
+| BENGKULU                    | 11        |
+| KALIMANTAN UTARA            | 3         |
+| UNMAPPED                    | 282       |
 
 ### 14.4 Endpoint API PDDikti (Wrapper)
 
@@ -576,101 +590,112 @@ Berdasarkan query API (2026-07-06):
 
 ### 14.5 Skema Data Perguruan Tinggi
 
-**Struktur file**: `data/perguruan-tinggi/{provinsi_id}.json`
+**Struktur file**: `data/perguruan-tinggi/{provinsi_id}.json` dan `data/perguruan-tinggi/all-pt.json`
 
 ```json
 [
   {
+    "id_sp": "00000000-0000-0000-0000-000000000000",
     "kode_pt": "001037",
     "nama_pt": "Universitas Negeri Jakarta",
-    "nama_singkat": "UNJ",
+    "nama_singkat": "",
     "bentuk_pt": "Universitas",
-    "status_pt": "negeri",
-    "kelompok": "Perguruan Tinggi Negeri",
-    "pembina": "PTN",
-    "akreditasi": "Unggul",
+    "status": "negeri",
     "provinsi_id": "31",
-    "provinsi": "DKI Jakarta",
-    "kabupaten_id": "3175",
-    "kabupaten": "Jakarta Timur",
-    "kecamatan": "Pulo Gadung",
-    "alamat": "Jalan Rawamangun Muka",
-    "kode_pos": "13220",
-    "email": "unj@unj.ac.id",
-    "no_tel": "021-4893854",
-    "website": "www.unj.ac.id",
-    "lintang": -6.194759,
-    "bujur": 106.878324,
-    "tgl_berdiri": "1964-05-16",
-    "status": "Aktif"
+    "provinsi": "DKI JAKARTA",
+    "kabupaten_id": "",
+    "kabupaten": "",
+    "kecamatan": "",
+    "alamat": "",
+    "lintang": null,
+    "bujur": null,
+    "akreditasi": "",
+    "kelompok": "Perguruan Tinggi Negeri"
   }
 ]
 ```
 
+**Catatan**: Field `id_sp`, `kabupaten_id`, `kabupaten`, `kecamatan`, `alamat`, `lintang`, `bujur`, `akreditasi`, dan `nama_singkat` masih kosong pada output MVP karena sumber list (`loadpt`) hanya menyediakan `id_sp`, `kode_pt`, dan `nama_pt`. Enrichment detail bisa dilakukan pasca-MVP via API detail atau sumber alternatif.
+
 ### 14.6 Transformasi vs API Asli
 
-| Field API PDDikti           | Field Baru       | Transformasi                                    |
+| Field API PDDikti / Mirror  | Field Baru       | Transformasi                                    |
 |-----------------------------|------------------|-------------------------------------------------|
+| `id_sp`                     | `id_sp`          | Preserve (internal PDDikti, digunakan untuk enrichment) |
 | `kode_pt: "001037  "`       | `kode_pt`        | Trim whitespace, 6 digit                        |
 | `nama_pt`                   | `nama_pt`        | Trim, preserve case                             |
-| `nm_singkat`                | `nama_singkat`   | Trim                                            |
-| `kelompok`                  | `kelompok`       | Preserve (e.g., "Perguruan Tinggi Negeri")     |
-| `pembina`                   | `pembina`        | Preserve (e.g., "PTN", "PTS", "Kopertis")      |
-| `status_pt: "Aktif"`        | `status`         | Preserve ("Aktif", "Tidak Aktif", dll)         |
-| `akreditasi_pt`             | `akreditasi`     | Preserve ("Unggul", "Baik Sekali", "Baik", dll) |
-| `provinsi_pt`               | `provinsi`       | Strip "Prov. ", normalisasi (sama seperti sekolah) |
-| `kab_kota_pt`               | `kabupaten`      | Strip "Kota ", normalisasi (sama seperti sekolah) |
-| `kecamatan_pt`              | `kecamatan`      | Strip "Kec. ", normalisasi                       |
-| `lintang_pt`                | `lintang`        | Sudah float (tidak perlu konversi)              |
-| `bujur_pt`                  | `bujur`          | Sudah float (tidak perlu konversi)              |
-| `tgl_berdiri_pt`            | `tgl_berdiri`    | ISO date → YYYY-MM-DD                           |
-| `id_sp`                     | (dihapus)        | Internal PDDikti, tidak relevan                  |
-| `kode_pos`                  | `kode_pos`       | Trim                                            |
-| `email`, `no_tel`, `website`| sama             | Trim                                            |
-| `alamat`                    | `alamat`         | Trim                                            |
+| `nm_singkat`                | `nama_singkat`   | Kosong (tidak tersedia di sumber list)          |
+| `kelompok`                  | `kelompok`       | Dihitung dari `status` — "Perguruan Tinggi Negeri" / "Perguruan Tinggi Swasta" |
+| `pembina`                   | —                | Tidak tersedia di sumber list (pasca-MVP)       |
+| `status_pt`                 | `status`         | Dihitung dari prefix kode PT dan keyword nama (negeri/swasta) |
+| `akreditasi_pt`             | `akreditasi`     | Kosong (tidak tersedia di sumber list)          |
+| `provinsi_pt`               | `provinsi`       | Mapping via `build/mapping-kode-pt.json` (3-digit prefix) dan fallback keyword nama |
+| `kab_kota_pt`               | `kabupaten`      | Kosong (tidak tersedia di sumber list)          |
+| `kecamatan_pt`              | `kecamatan`      | Kosong                                          |
+| `lintang_pt`                | `lintang`        | Kosong                                          |
+| `bujur_pt`                  | `bujur`          | Kosong                                          |
+| `tgl_berdiri_pt`            | `tgl_berdiri`    | Tidak tersedia                                  |
+| `kode_pos`                  | `kode_pos`       | Tidak tersedia                                  |
+| `email`, `no_tel`, `website`| —                | Tidak tersedia                                  |
+| `alamat`                    | `alamat`         | Tidak tersedia                                  |
 
 **Field turunan**:
-- `provinsi_id`: Mapping dari `provinsi_pt` (nama) → `provinces.json` (ID Kemendagri)
-- `kabupaten_id`: Mapping dari `kab_kota_pt` (nama) → `regencies/{provinsi_id}.json` (ID Kemendagri)
-- `bentuk_pt`: Klasifikasi dari `nama_pt` — Universitas, Institut, Sekolah Tinggi, Politeknik, Akademi
-- `status_pt`: "Perguruan Tinggi Negeri" → "negeri", "Perguruan Tinggi Swasta" → "swasta" (dari field `kelompok`)
+- `provinsi_id`: Mapping dari 3-digit prefix `kode_pt` → `build/mapping-kode-pt.json` → Kemendagri ID; fallback keyword matching dari nama PT.
+- `kabupaten_id`: Belum diisi (perlu enrichment detail).
+- `bentuk_pt`: Klasifikasi dari `nama_pt` — Universitas, Institut, Sekolah Tinggi, Politeknik, Akademi, Lainnya.
+- `status`: "negeri" / "swasta" dari prefix kode PT dan keyword nama (e.g., "Negeri", "Kementerian", "Politeknik Negeri").
 
 ### 14.7 Strategi Fetch PDDikti
 
-**Masalah**: API PDDikti wrapper tidak menyediakan endpoint "list all PT by province". Hanya search by keyword.
+**Masalah**: API PDDikti wrapper (`pddikti.rone.dev` / `pddikti.fastapicloud.dev`) tidak menyediakan endpoint "list all PT by province". Hanya search by keyword, dengan pagination yang tidak dapat diandalkan untuk enumerasi lengkap.
 
-**Strategi fetch**:
-1. **Cari per provinsi**: Query search dengan keyword nama provinsi — tidak ideal, hasil tidak lengkap
-2. **Cari per kabupaten**: Query search dengan keyword nama kabupaten — lebih targeted tapi banyak request
-3. **Investigasi API resmi**: Cek apakah `pddikti.kemdikbud.go.id` punya endpoint list all PT atau download CSV
-4. **Scraping portal**: Jika tidak ada API list, scrape portal PDDikti (less ideal, but possible)
-5. **Alternative**: Query statistik per provinsi untuk verifikasi jumlah, lalu scrape/search untuk data lengkap
+**Solusi**: Gunakan **API resmi frontend PDDikti** endpoint `https://api-frontend.kemdikbud.go.id/loadpt` yang mengembalikan seluruh daftar PT. Untuk stabilitas, fetch dari **GitHub mirror** `mzakiyuddin/daftar-perguruan-tinggi-indonesia` yang diperbarui setiap hari dari endpoint tersebut.
 
-**Rate limit**:
-- `pddikti.rone.dev`: <500 req/day (low traffic)
-- `pddikti.fastapicloud.dev`: >500 req/day (high traffic)
-- API bisa return 503 saat traffic protection aktif
-- Strategy: cache semua raw data di Git, throttle request, retry dengan backoff
+**Pipeline Fase 7**:
+1. `build/fetch-pt.js`: Download `data.json` dari GitHub mirror → `raw-pt/pt.json`.
+2. `build/normalize-pt.js`:
+   - Filter PT luar negeri (`90xxxx`) dan record tanpa kode.
+   - Mapping `provinsi_id` via `build/mapping-kode-pt.json` (3-digit prefix → Kemendagri) dan fallback keyword matching dari nama PT.
+   - Klasifikasi `bentuk_pt` dan `status` (negeri/swasta).
+   - Output `data/perguruan-tinggi/all-pt.json` dan `data/perguruan-tinggi/{provinsi_id}.json`.
+   - Generate `data/index/pt-by-kode.json`.
+3. `build/validate-pt.js`: Validasi struktur, duplikat, dan province ID.
+
+**Run scripts**:
+```bash
+npm run fetch-pt
+npm run normalize-pt
+npm run validate-pt
+# atau sekaligus
+npm run build-pt
+```
+
+**Enrichment pasca-MVP**:
+- Untuk mengisi `kabupaten`, `koordinat`, `akreditasi`, `alamat`, `kontak`, dan `tgl_berdiri`, perlu hit API detail per PT (e.g., wrapper API `/api/pt/detail/{id_pt}/`) atau integrasi dengan data lain.
+- Rate limit wrapper: <500 req/day (`pddikti.rone.dev`), >500 req/day (`pddikti.fastapicloud.dev`). Gunakan throttle, retry backoff, dan cache.
 
 ### 14.8 Validasi Data PT
 
-- Cek `kode_pt` duplikat across provinsi
-- Cek field kosong (nama_pt, kode_pt, provinsi_id, kabupaten_id)
-- Cek koordinat valid (lintang -90..90, bujur -180..180)
-- Cek `provinsi_id` dan `kabupaten_id` match dengan wilayah referensi
-- Cek nama provinsi & kabupaten konsisten dengan file wilayah (setelah normalisasi)
-- Cek `bentuk_pt` hanya nilai valid: Universitas, Institut, Sekolah Tinggi, Politeknik, Akademi, dll
-- **Build gagal jika ada mismatch**
+- Cek `kode_pt` duplikat across provinsi.
+- Cek field kosong untuk field required: `nama_pt`, `kode_pt`, `bentuk_pt`, `status`, `provinsi_id`, `provinsi`.
+- Cek `provinsi_id` valid (terdaftar di `provinces.json`).
+- Cek `bentuk_pt` hanya nilai valid: `Universitas`, `Institut`, `Sekolah Tinggi`, `Politeknik`, `Akademi`, `Lainnya`.
+- Cek index `data/index/pt-by-kode.json` mencakup seluruh `kode_pt`.
+- Cek per-province file `data/perguruan-tinggi/{provinsi_id}.json` tersedia untuk setiap provinsi yang ter-mapping.
+- Koordinat, kabupaten, akreditasi, dan field kontak sengaja tidak divalidasi pada MVP karena belum diisi (perlu enrichment pasca-MVP).
+- **Build gagal jika ada mismatch pada field required atau duplikat `kode_pt`**. Setelah validasi lulus, pipeline bisa commit & push.
 
 ### 14.9 Index Perguruan Tinggi
 
 **`data/index/pt-by-kode.json`**:
 ```json
 {
-  "001037": { "provinsi_id": "31", "kabupaten_id": "3175" },
-  "031005": { "provinsi_id": "31", "kabupaten_id": "3171" }
+  "001037": { "provinsi_id": "31", "kabupaten_id": "", "nama_pt": "Universitas Negeri Jakarta" },
+  "031005": { "provinsi_id": "31", "kabupaten_id": "", "nama_pt": "Universitas Jakarta" }
 }
 ```
+
+**Catatan**: `kabupaten_id` kosong pada MVP karena belum di-enrich. Index tetap berguna untuk lookup cepat `kode_pt` → `provinsi_id`.
 
 **Update `data/index/summary.json`** — tambah section PT:
 ```json

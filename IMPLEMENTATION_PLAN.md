@@ -134,25 +134,22 @@ Beberapa library npm yang disarankan untuk mempermudah scraping dan processing:
    - Lihat dokumentasi endpoint di `https://pddikti.rone.dev/api/docs` (Swagger).
    - **Catatan**: API wrapper tidak resmi Kemendikbud. Data © PDDikti, maintained by ridwaanhall / RoneAI.
 2. **Script Fetch PT (`build/fetch-pt.js`)**:
-   - Download data 4,416 PT dari PDDikti API.
-   - Challenge: tidak ada endpoint "list all PT by province" — hanya search by keyword.
-   - Strategi: search per kabupaten/kota, atau investigasi portal resmi untuk endpoint list/download CSV.
+   - **Sumber data**: GitHub mirror `mzakiyuddin/daftar-perguruan-tinggi-indonesia` yang mengambil dari API resmi PDDikti `https://api-frontend.kemdikbud.go.id/loadpt` (full list PT).
+   - Endpoint ini menyediakan list all PT (10.219 records, termasuk PT luar negeri), tidak seperti API wrapper yang hanya search by keyword.
+   - Download ke `raw-pt/pt.json`.
    - Rate limit: throttle request, retry dengan backoff, cache raw data di Git.
-   - Simpan raw data ke `raw-pt/{provinsi_id}.json`.
 3. **Script Normalisasi PT (`build/normalize-pt.js`)**:
-   - Transformasi field sesuai Section 14.6 blueprint:
-     - Trim `kode_pt` (6 digit), strip prefix wilayah ("Prov. ", "Kota ", "Kec. ").
-     - Normalisasi nama provinsi/kabupaten sama seperti sekolah K-12.
-     - Mapping `provinsi_pt` (nama) → `provinsi_id` (Kemendagri) via `provinces.json`.
-     - Mapping `kab_kota_pt` (nama) → `kabupaten_id` (Kemendagri) via `regencies/{provinsi_id}.json`.
-     - Klasifikasi `bentuk_pt`: Universitas, Institut, Sekolah Tinggi, Politeknik, Akademi.
-     - `status_pt`: "Perguruan Tinggi Negeri" → "negeri", "Perguruan Tinggi Swasta" → "swasta".
-     - Konversi `tgl_berdiri_pt` → YYYY-MM-DD.
-     - Hapus field internal (`id_sp`, `sk_pendirian_sp`, `tgl_sk_pendirian_sp`).
-   - Output: `data/perguruan-tinggi/{provinsi_id}.json`.
-4. **Script Index PT (`build/build-index-pt.js`)**:
-   - Generate `data/index/pt-by-kode.json` — mapping `kode_pt` → `{provinsi_id, kabupaten_id}`.
-   - Update `data/index/summary.json` dengan section `total_pt` dan `per_provinsi_pt`.
+   - Filter PT luar negeri (kode `90xxxx`) dan record tanpa kode.
+   - Transformasi field:
+     - Trim `kode_pt` (6 digit).
+     - Mapping `provinsi_id` via `build/mapping-kode-pt.json` (3-digit prefix → Kemendagri) dan fallback keyword matching dari nama PT.
+     - Klasifikasi `bentuk_pt`: Universitas, Institut, Sekolah Tinggi, Politeknik, Akademi, Lainnya.
+     - `status`: negeri/swasta dari prefix kode dan keyword nama.
+     - `kelompok`: Perguruan Tinggi Negeri / Perguruan Tinggi Swasta.
+   - Output: `data/perguruan-tinggi/all-pt.json` dan `data/perguruan-tinggi/{provinsi_id}.json`.
+   - Catatan: kabupaten_id, koordinat, akreditasi belum diisi karena sumber list tidak menyediakan detail tersebut. Perlu enrichment via detail API pasca-MVP.
+4. **Script Index PT (`build/normalize-pt.js` juga menangani)**:
+   - Generate `data/index/pt-by-kode.json` — mapping `kode_pt` → `{provinsi_id, kabupaten_id, nama_pt}`.
 5. **Script Validasi PT (`build/validate-pt.js`)**:
    - Cek `kode_pt` duplikat across provinsi.
    - Cek field kosong (nama_pt, kode_pt, provinsi_id, kabupaten_id).
@@ -288,24 +285,25 @@ Beberapa library npm yang disarankan untuk mempermudah scraping dan processing:
 
 **Conclusion:** Fase 6 dianggap selesai untuk MVP. Tidak perlu implementasi fetcher Dapodik resmi karena fallback API sudah menyediakan data Dapodik yang lengkap. Integrasi official Dapodik bisa dilakukan pasca-MVP jika diperlukan.
 
-### Fase 7: Perguruan Tinggi (PDDikti) — 5% 🔵
+### Fase 7: Perguruan Tinggi (PDDikti) — 70% 🔵
 
 | Item | Status | Catatan |
 |------|--------|--------|
-| Riset API PDDikti | ✅ Done | API wrapper ditemukan, 4,416 PT, endpoint terdokumentasi |
+| Riset API PDDikti | ✅ Done | API wrapper + API resmi frontend `loadpt` + GitHub mirror ditemukan |
 | Blueprint Section 14 | ✅ Done | Skema, transformasi, strategi fetch, validasi |
-| `build/fetch-pt.js` | ❌ Pending | Challenge: no "list all" endpoint |
-| `build/normalize-pt.js` | ❌ Pending | |
-| `data/perguruan-tinggi/*.json` | ❌ Pending | |
-| `data/index/pt-by-kode.json` | ❌ Pending | |
-| `build/validate-pt.js` | ❌ Pending | |
+| `build/fetch-pt.js` | ✅ Done | Fetch dari GitHub mirror `mzakiyuddin/daftar-perguruan-tinggi-indonesia` |
+| `build/normalize-pt.js` | ✅ Done | Normalize 6,600 PT unik (filter 90xxxx), mapping provinsi ~95,7% |
+| `build/validate-pt.js` | ✅ Done | Validasi struktur, duplikat, province ID passed |
+| `data/perguruan-tinggi/*.json` | ✅ Done | 34 file provinsi + `all-pt.json` generated |
+| `data/index/pt-by-kode.json` | ✅ Done | Generated |
+| Detail enrichment (koordinat, akreditasi, kabupaten) | ❌ Pending | Perlu hit API detail per PT atau sumber lain |
 | Integrasi GenLog PT | ❌ Pending | |
 
-**Laporan Fase 7:** Riset API selesai. PDDikti API wrapper (`pddikti.fastapicloud.dev`) berfungsi dengan 4,416 PT terdaftar. Challenge utama: API hanya menyediakan search by keyword, tidak ada endpoint "list all PT by province". Strategi fetch perlu pendekatan kreatif (search per kabupaten, atau investigasi portal resmi).
+**Laporan Fase 7:** Data PT berhasil di-fetch dari GitHub mirror API resmi PDDikti (`api-frontend.kemdikbud.go.id/loadpt`). Dari 10.219 raw records, 6,600 PT Indonesia unik ternormalisasi ke 34 provinsi. Mapping provinsi berhasil ~95,7% (282 unmapped, mayoritas STT/STAI tanpa nama kota). Kabupaten, koordinat, dan akreditasi masih kosong karena sumber list tidak menyediakan detail — perlu enrichment pasca-MVP.
 
 ---
 
-### Progress Keseluruhan: ~95%
+### Progress Keseluruhan: ~97%
 
 ```
 Fase 1: Setup          ████████████████████ 100%  ✅
@@ -314,13 +312,13 @@ Fase 3: Normalize      ███████████████████
 Fase 4: CI/CD          ████████████████████ 100%  ✅
 Fase 5: GenLog         ████████████████████ 100%  ✅
 Fase 6: Dapodik        ████████████████████ 100%  ✅ (MVP Scope)
-Fase 7: PDDikti/PT     █░░░░░░░░░░░░░░░░░░░   5%  🔵 (research done)
+Fase 7: PDDikti/PT     ██████████████░░░░░░  70%  🔵 (fetch & normalize done)
 ```
 
 **Blocker utama:**
-Tidak ada blocker untuk MVP K-12. Fase 1–6 selesai. Fase 7 (PDDikti) pasca-MVP.
+Tidak ada blocker untuk MVP K-12. Fase 1–6 selesai. Fase 7 (PDDikti) fetch & normalize dasar selesai; detail enrichment dan integrasi GenLog masih pending.
 
 **Next actions:**
-1. Browser preview GenLog untuk verifikasi manual UI (search SMAN 1 Jakarta & Bandung)
-2. MVP K-12 sudah lengkap — bisa rilis v0.1.0
-3. Fase 7: PDDikti / Perguruan Tinggi — mulai coding pasca-MVP (perlu strategi fetch karena tidak ada endpoint "list all PT")
+1. Enrichment data PT: koordinat, kabupaten, akreditasi via API detail atau sumber alternatif.
+2. Integrasi GenLog: tambah search perguruan tinggi di `js/profile.js`.
+3. Rilis v0.2.0 setelah Fase 7 selesai.
