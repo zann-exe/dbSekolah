@@ -77,3 +77,67 @@ Metadata ringkas mengenai database keseluruhan.
   }
 }
 ```
+
+---
+
+## 4. File Perguruan Tinggi (`data/perguruan-tinggi/{provinsi_id}.json` dan `data/perguruan-tinggi/all-pt.json`)
+
+File PT disimpan per provinsi (`{provinsi_id}.json`) dan secara aggregate (`all-pt.json`). Setiap file berisi array objek perguruan tinggi.
+
+### Contoh Data:
+```json
+[
+  {
+    "id_sp": "00000000-0000-0000-0000-000000000000",
+    "kode_pt": "001037",
+    "nama_pt": "Universitas Negeri Jakarta",
+    "nama_singkat": "",
+    "bentuk_pt": "Universitas",
+    "status": "negeri",
+    "provinsi_id": "31",
+    "provinsi": "DKI JAKARTA",
+    "kabupaten_id": "",
+    "kabupaten": "",
+    "kecamatan": "",
+    "alamat": "",
+    "lintang": null,
+    "bujur": null,
+    "akreditasi": "",
+    "kelompok": "Perguruan Tinggi Negeri"
+  }
+]
+```
+
+### Detail Field:
+| Nama Field | Tipe Data | Deskripsi |
+| :--- | :--- | :--- |
+| `id_sp` | String | Internal PDDikti ID (UUID). Dari sumber list, digunakan untuk enrichment detail. |
+| `kode_pt` | String | Kode perguruan tinggi 6 digit (unik nasional). |
+| `nama_pt` | String | Nama lengkap perguruan tinggi (preserve case). |
+| `nama_singkat` | String | Nama singkat/akronim PT. Kosong pada MVP. |
+| `bentuk_pt` | String | Klasifikasi: `Universitas`, `Institut`, `Sekolah Tinggi`, `Politeknik`, `Akademi`, `Lainnya`. |
+| `status` | String | Status: `"negeri"` atau `"swasta"`. |
+| `provinsi_id` | String | Kode wilayah provinsi 2-digit Kemendagri (contoh: `"31"`). Bisa kosong jika unmapped. |
+| `provinsi` | String | Nama provinsi (UPPERCASE). |
+| `kabupaten_id` | String | Kode wilayah kabupaten/kota Kemendagri. Kosong pada MVP. |
+| `kabupaten` | String | Nama kabupaten/kota. Kosong pada MVP. |
+| `kecamatan` | String | Kecamatan. Kosong pada MVP. |
+| `alamat` | String | Alamat jalan. Kosong pada MVP. |
+| `lintang` | Number/Null | Latitude. Kosong pada MVP. |
+| `bujur` | Number/Null | Longitude. Kosong pada MVP. |
+| `akreditasi` | String | Akreditasi PT. Kosong pada MVP. |
+| `kelompok` | String | `"Perguruan Tinggi Negeri"` atau `"Perguruan Tinggi Swasta"`. |
+
+---
+
+## 5. File Indeks PT (`data/index/pt-by-kode.json`)
+
+Indeks global untuk lookup cepat `kode_pt` → `provinsi_id` dan `nama_pt`.
+
+### Contoh Data:
+```json
+{
+  "001037": { "provinsi_id": "31", "kabupaten_id": "", "nama_pt": "Universitas Negeri Jakarta" },
+  "031005": { "provinsi_id": "31", "kabupaten_id": "", "nama_pt": "Universitas Jakarta" }
+}
+```

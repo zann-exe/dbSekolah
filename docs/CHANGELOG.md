@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.2.0 (unreleased) — PDDikti PT Data
+
+### Added
+- `build/fetch-pt.js` — fetch data PT dari GitHub mirror `mzakiyuddin/daftar-perguruan-tinggi-indonesia`
+- `build/mapping-kode-pt.json` — mapping 3-digit prefix `kode_pt` → `provinsi_id` Kemendagri
+- `build/normalize-pt.js` — filter PT luar negeri (`90xxxx`), klasifikasi `bentuk_pt`, `status`, mapping provinsi
+- `build/validate-pt.js` — validasi duplikat `kode_pt`, province ID valid, index coverage
+- `package.json` scripts: `fetch-pt`, `normalize-pt`, `validate-pt`, `build-pt`
+
+### Data
+- Raw records: 10,219 (dari `loadpt` mirror)
+- PT Indonesia unik: 6,600
+- PT mapped to province: 6,318 (~95,7%)
+- PT unmapped: 282 (~4,3%, mayoritas STT/STAI tanpa nama kota)
+- Output: `data/perguruan-tinggi/all-pt.json` + 34 file provinsi + `data/index/pt-by-kode.json`
+
+### Notes
+- Detail enrichment (kabupaten, koordinat, akreditasi, kontak) masih pending pasca-MVP.
+- CDN jsDelivr PT data aktif: `https://cdn.jsdelivr.net/gh/zann-exe/dbSekolah@master/data/perguruan-tinggi/`
+
 ## v0.1.0 — 2026-07-06
 
 ### Added
