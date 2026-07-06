@@ -16,5 +16,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run validation
+      - name: Validate school data
         run: npm run validate
+
+      - name: Validate PT data
+        run: npm run validate-pt

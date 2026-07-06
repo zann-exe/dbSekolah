@@ -1,5 +1,6 @@
 node_modules/
 raw/
+raw-pt/
 .env
 *.log
 .DS_Store
