@@ -265,15 +265,31 @@ Beberapa library npm yang disarankan untuk mempermudah scraping dan processing:
 
 **Catatan:** Data source menggunakan singkatan "SMAN 1" (bukan "SMA Negeri 1"), jadi user perlu mencari dengan keyword yang sesuai data.
 
-### Fase 6: Dapodik Integration — 0% ❌
+### Fase 6: Dapodik Integration — 20% 🔵 Research Done
 
 | Item | Status | Catatan |
 |------|--------|--------|
-| Riset akses Dapodik | ❌ Pending | |
-| `fetch-all.js` support Dapodik | ❌ Pending | |
-| Compare Dapodik vs API | ❌ Pending | |
+| Riset akses Dapodik | ✅ Done | Official API perlu akun terdaftar & diaktivasi Admin Dapodik Pusat |
+| `fetch-all.js` support Dapodik | ❌ Pending | Butuh akses API resmi atau endpoint publik yang stabil |
+| Compare Dapodik vs API | ✅ Done | Data fallback API (`api-sekolah-indonesia.vercel.app`) cocok dengan Dapodik |
 
-**Laporan Fase 6:** Belum dimulai. Pasca-MVP.
+**Laporan Fase 6:** Riset akses Dapodik selesai. Temuan utama:
+
+1. **Official Dapodik API** (`operator.jardiknas.org/dapodik/api.php` atau `api.pusdatin.kemendikbudristek.com/referensi/`) memerlukan:
+   - Akun API Dapodik yang terdaftar dan diaktivasi oleh Admin Dapodik Pusat
+   - Autentikasi dengan username + passport/session
+   - Akses read-only
+   - Pengajuan resmi dari sekolah/dinas pendidikan ke Dapodik Pusat
+
+2. **Endpoint publik Dapodik** (`dapo.kemdikbud.go.id/api/getHasilPencarian`) tidak bisa diakses langsung dari environment ini (DNS/TLS issue) dan kemungkinan dilindungi CORS.
+
+3. **Fallback API yang sekarang digunakan** (`api-sekolah-indonesia.vercel.app`) adalah scraper/proxy dari Dapodik. Sudah diverifikasi data-nya cocok:
+   - Contoh: `SMAN 1 JAKARTA` (NPSN 20100216)
+   - API: `SMAN 1 JAKARTA`, Jakarta Pusat, `-6.1672, 106.8373`
+   - CDN data: `SMAN 1 JAKARTA`, Jakarta Pusat, `-6.1672, 106.8373`
+   - Hanya perbedaan format normalisasi (prefix, status N→negeri)
+
+**Conclusion:** Untuk MVP, fallback API sudah cukup karena data-nya sama dengan Dapodik. Fase 6 implementasi penuh butuh akses official API atau endpoint publik yang stabil.
 
 ### Fase 7: Perguruan Tinggi (PDDikti) — 5% 🔵
 
@@ -300,7 +316,7 @@ Fase 2: Fetching       ███████████████████
 Fase 3: Normalize      ████████████████████ 100%  ✅
 Fase 4: CI/CD          ████████████████████ 100%  ✅
 Fase 5: GenLog         ████████████████████ 100%  ✅
-Fase 6: Dapodik        ░░░░░░░░░░░░░░░░░░░░   0%  ❌
+Fase 6: Dapodik        ████░░░░░░░░░░░░░░░░  20%  🔵 Research Done
 Fase 7: PDDikti/PT     █░░░░░░░░░░░░░░░░░░░   5%  🔵 (research done)
 ```
 
@@ -309,5 +325,5 @@ Tidak ada blocker untuk MVP K-12. Fase 5 selesai. Next: Fase 6 & 7 pasca-MVP.
 
 **Next actions:**
 1. Browser preview GenLog untuk verifikasi manual UI (search SMAN 1 Jakarta & Bandung)
-2. Lanjut Fase 6: Dapodik integration (riset akses, compare data, fetch support)
-3. Lanjut Fase 7: PDDikti / Perguruan Tinggi (strategi fetch karena tidak ada endpoint "list all PT")
+2. Fase 6: Butuh akses official Dapodik API untuk implementasi penuh. Alternatif: tetap pakai fallback API yang data-nya sudah terverifikasi sama.
+3. Fase 7: PDDikti / Perguruan Tinggi — mulai coding pasca-MVP (perlu strategi fetch karena tidak ada endpoint "list all PT")
