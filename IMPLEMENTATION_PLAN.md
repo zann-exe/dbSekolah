@@ -289,7 +289,12 @@ Beberapa library npm yang disarankan untuk mempermudah scraping dan processing:
    - CDN data: `SMAN 1 JAKARTA`, Jakarta Pusat, `-6.1672, 106.8373`
    - Hanya perbedaan format normalisasi (prefix, status N→negeri)
 
-**Conclusion:** Untuk MVP, fallback API sudah cukup karena data-nya sama dengan Dapodik. Fase 6 implementasi penuh butuh akses official API atau endpoint publik yang stabil.
+**Verifikasi completeness per-province API:**
+- DKI Jakarta (API: 010000): API total = 4,800, CDN data = 4,800 ✅
+- Jawa Barat (API: 020000): API total = 29,532, CDN data = 29,532 ✅
+- Search endpoint `/sekolah/s?sekolah=` bukan indikator completeness — itu hanya pencarian nama, contoh: `a` = 180,997, `n` = 195,897 (tidak semua sekolah mengandung huruf tertentu).
+
+**Conclusion:** Untuk MVP, fallback API sudah **lengkap** dan sama dengan Dapodik. Fase 6 implementasi penuh butuh akses official API atau endpoint publik yang stabil.
 
 ### Fase 7: Perguruan Tinggi (PDDikti) — 5% 🔵
 
