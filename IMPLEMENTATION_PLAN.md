@@ -231,18 +231,23 @@ Beberapa library npm yang disarankan untuk mempermudah scraping dan processing:
 - Provinsi terbanyak: Jawa Barat (29,532), Jawa Timur (27,807), Jawa Tengah (25,002)
 - Provinsi tersedikit: Kalimantan Utara (716), Kep. Bangka Belitung (1,142)
 
-### Fase 4: CI/CD & Publikasi — 75% ✅
+### Fase 4: CI/CD & Publikasi — 100% ✅
 
 | Item | Status | Catatan |
 |------|--------|--------|
 | `docs/README.md` | ✅ Done | Overview, struktur, usage, CDN, schema, license |
 | `docs/CHANGELOG.md` | ✅ Done | v0.1.0 — initial setup & data fetch |
 | `.github/workflows/validate.yml` | ✅ Done | CI validate on PR/push to main/master |
-| CDN jsDelivr verification | ❌ Pending | Setelah repo dipublish ke GitHub |
+| Publish ke GitHub | ✅ Done | Initial commit 120 files, push `master` sukses |
+| CDN jsDelivr verification | ✅ Done | `summary.json` & `data/provinsi/31.json` accessible |
 
-**Laporan Fase 4:** Dokumentasi dan CI workflow sudah lengkap. Tinggal publish repo ke GitHub dan verifikasi URL CDN jsDelivr.
+**Laporan Fase 4:** Repo berhasil dipublish ke `https://github.com/zann-exe/dbSekolah`. CDN jsDelivr sudah aktif dan diverifikasi.
 
-### Fase 5: Integrasi GenLog — 0% ❌
+**Verified URLs:**
+- `https://cdn.jsdelivr.net/gh/zann-exe/dbSekolah@master/data/index/summary.json` ✅
+- `https://cdn.jsdelivr.net/gh/zann-exe/dbSekolah@master/data/provinsi/31.json` ✅
+
+### Fase 5: Integrasi GenLog — 0% 🔵 Ready
 
 | Item | Status | Catatan |
 |------|--------|--------|
@@ -250,7 +255,7 @@ Beberapa library npm yang disarankan untuk mempermudah scraping dan processing:
 | Deprecate proxy `search-sekolah` | ❌ Pending | |
 | End-to-end test | ❌ Pending | |
 
-**Laporan Fase 5:** Belum dimulai. Menunggu repo dipublish & CDN aktif.
+**Laporan Fase 5:** Belum diimplementasikan, tapi blocker sudah hilang. Repo dipublish & CDN jsDelivr aktif. CDN base URL: `https://cdn.jsdelivr.net/gh/zann-exe/dbSekolah@master/`.
 
 ### Fase 6: Dapodik Integration — 0% ❌
 
@@ -285,19 +290,18 @@ Beberapa library npm yang disarankan untuk mempermudah scraping dan processing:
 Fase 1: Setup          ████████████████████ 100%  ✅
 Fase 2: Fetching       ████████████████████ 100%  ✅
 Fase 3: Normalize      ████████████████████ 100%  ✅
-Fase 4: CI/CD          ████████████████░░░░  75%  ✅ (CDN verify pending)
-Fase 5: GenLog         ░░░░░░░░░░░░░░░░░░░░   0%  ❌
+Fase 4: CI/CD          ████████████████████ 100%  ✅
+Fase 5: GenLog         ░░░░░░░░░░░░░░░░░░░░   0%  🔵 Ready
 Fase 6: Dapodik        ░░░░░░░░░░░░░░░░░░░░   0%  ❌
 Fase 7: PDDikti/PT     █░░░░░░░░░░░░░░░░░░░   5%  🔵 (research done)
 ```
 
 **Blocker utama:**
-1. **Publish ke GitHub** — untuk aktivasi CDN jsDelivr
-2. **Mulai Fase 5 (GenLog integration)** — update `js/profile.js`
+1. **Mulai Fase 5 (GenLog integration)** — update `js/profile.js` di repo GenLog
 
 **Next actions:**
-1. Publish repo ke GitHub → verifikasi CDN jsDelivr
-2. Update `js/profile.js` di GenLog untuk fetch data sekolah dari CDN
-3. Deprecate atau fallback-kan proxy `search-sekolah`
-4. End-to-end test: search "SMA Negeri 1" di Jakarta & Bandung
+1. Update `js/profile.js` di GenLog untuk fetch data sekolah dari CDN
+2. Deprecate atau fallback-kan proxy `search-sekolah`
+3. End-to-end test: search "SMA Negeri 1" di Jakarta & Bandung
+4. Commit & push perubahan GenLog
 5. Lanjut Fase 6 (Dapodik) dan Fase 7 (PDDikti/PT) pasca-MVP

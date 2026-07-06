@@ -16,5 +16,17 @@
 - `package.json` dengan scripts: fetch, normalize, build-index, validate, build-all
 
 ### Data
-- Raw data fetched: 31/34 provinsi (missing: Sumatera Utara, Sumatera Barat, Riau)
-- Total raw records: ~190,163 sekolah
+- Raw data fetched: 34/34 provinsi lengkap (termasuk 3 provinsi sebelumnya missing: Sumatera Utara, Sumatera Barat, Riau)
+- Total sekolah: 215,372
+- by-npsn.json: 215,371 entries (1 NPSN duplikat di source data)
+- Validasi: 0 errors, 2,738 warnings
+
+### Fixed
+- `build/validate.js`: fix `ReferenceError` variable scoping
+- `build/validate.js`: relaxed matching untuk provinsi/kabupaten names
+- `build/validate.js`: non-standard NPSN & duplicate NPSN diubah ke warning
+- `build/normalize.js`: tambah manual overrides untuk `Humbang Hasudutan` (12) dan `Lima Puluh Koto` (13)
+
+### Published
+- Initial commit & push ke `https://github.com/zann-exe/dbSekolah`
+- CDN jsDelivr aktif: `https://cdn.jsdelivr.net/gh/zann-exe/dbSekolah@master/`
