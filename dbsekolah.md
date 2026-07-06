@@ -391,7 +391,7 @@ User ketik nama sekolah → filter cached data by sekah.includes(query)
 - [x] `data/index/pt-by-kode.json` — index kode PT → {provinsi_id, kabupaten_id, nama_pt}
 - [x] `build/validate-pt.js` — validasi data PT (kode duplikat, wilayah match)
 - [x] Update `docs/SCHEMA.md` dengan skema data perguruan tinggi
-- [ ] Integrasi GenLog: tambah dropdown/search perguruan tinggi di profile
+- [x] Integrasi GenLog: tambah dropdown/search perguruan tinggi di profile
 
 ---
 
@@ -485,7 +485,7 @@ Agent yang akan mengimplementasikan blueprint ini WAJIB memenuhi semua checklist
 - [x] `data/index/pt-by-kode.json` generated
 - [x] `build/validate-pt.js` validasi data PT
 - [x] `docs/SCHEMA.md` diupdate dengan skema PT
-- [ ] Integrasi GenLog: search perguruan tinggi di profile
+- [x] Integrasi GenLog: search perguruan tinggi di profile
 
 ---
 

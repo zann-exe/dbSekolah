@@ -285,7 +285,7 @@ Beberapa library npm yang disarankan untuk mempermudah scraping dan processing:
 
 **Conclusion:** Fase 6 dianggap selesai untuk MVP. Tidak perlu implementasi fetcher Dapodik resmi karena fallback API sudah menyediakan data Dapodik yang lengkap. Integrasi official Dapodik bisa dilakukan pasca-MVP jika diperlukan.
 
-### Fase 7: Perguruan Tinggi (PDDikti) — 70% 🔵
+### Fase 7: Perguruan Tinggi (PDDikti) — 100% ✅
 
 | Item | Status | Catatan |
 |------|--------|--------|
@@ -296,14 +296,15 @@ Beberapa library npm yang disarankan untuk mempermudah scraping dan processing:
 | `build/validate-pt.js` | ✅ Done | Validasi struktur, duplikat, province ID passed |
 | `data/perguruan-tinggi/*.json` | ✅ Done | 34 file provinsi + `all-pt.json` generated |
 | `data/index/pt-by-kode.json` | ✅ Done | Generated |
-| Detail enrichment (koordinat, akreditasi, kabupaten) | ❌ Pending | Perlu hit API detail per PT atau sumber lain |
-| Integrasi GenLog PT | ❌ Pending | |
+| Dokumentasi PT | ✅ Done | README, SCHEMA, CHANGELOG, dbsekolah.md diupdate |
+| Integrasi GenLog PT | ✅ Done | Section Pendidikan Tinggi di Profil Alumni dengan searchable PT dropdown |
+| Detail enrichment (koordinat, akreditasi, kabupaten) | ❌ Pending | Pasca-MVP: perlu hit API detail per PT atau sumber lain |
 
-**Laporan Fase 7:** Data PT berhasil di-fetch dari GitHub mirror API resmi PDDikti (`api-frontend.kemdikbud.go.id/loadpt`). Dari 10.219 raw records, 6,600 PT Indonesia unik ternormalisasi ke 34 provinsi. Mapping provinsi berhasil ~95,7% (282 unmapped, mayoritas STT/STAI tanpa nama kota). Kabupaten, koordinat, dan akreditasi masih kosong karena sumber list tidak menyediakan detail — perlu enrichment pasca-MVP.
+**Laporan Fase 7:** Data PT berhasil di-fetch dari GitHub mirror API resmi PDDikti (`api-frontend.kemdikbud.go.id/loadpt`). Dari 10.219 raw records, 6.600 PT Indonesia unik ternormalisasi ke 34 provinsi. Mapping provinsi berhasil ~95,7% (282 unmapped, mayoritas STT/STAI tanpa nama kota). Kabupaten, koordinat, dan akreditasi masih kosong karena sumber list tidak menyediakan detail. Integrasi GenLog selesai: section Pendidikan Tinggi di Profil Alumni dapat mencari PT dari CDN berdasarkan provinsi.
 
 ---
 
-### Progress Keseluruhan: ~97%
+### Progress Keseluruhan: 100% ✅
 
 ```
 Fase 1: Setup          ████████████████████ 100%  ✅
@@ -312,13 +313,13 @@ Fase 3: Normalize      ███████████████████
 Fase 4: CI/CD          ████████████████████ 100%  ✅
 Fase 5: GenLog         ████████████████████ 100%  ✅
 Fase 6: Dapodik        ████████████████████ 100%  ✅ (MVP Scope)
-Fase 7: PDDikti/PT     ██████████████░░░░░░  70%  🔵 (fetch & normalize done)
+Fase 7: PDDikti/PT     ████████████████████ 100%  ✅ (MVP scope)
 ```
 
 **Blocker utama:**
-Tidak ada blocker untuk MVP K-12. Fase 1–6 selesai. Fase 7 (PDDikti) fetch & normalize dasar selesai; detail enrichment dan integrasi GenLog masih pending.
+Tidak ada blocker untuk MVP K-12 dan PT dasar. Fase 1–7 selesai untuk MVP. Detail enrichment PT (koordinat, kabupaten, akreditasi) masih pending pasca-MVP.
 
-**Next actions:**
+**Next actions (pasca-MVP):**
 1. Enrichment data PT: koordinat, kabupaten, akreditasi via API detail atau sumber alternatif.
-2. Integrasi GenLog: tambah search perguruan tinggi di `js/profile.js`.
-3. Rilis v0.2.0 setelah Fase 7 selesai.
+2. Perluas integrasi GenLog: PT community/angkatan kampus, alur apply alumni PT, atau pathway tracker.
+3. Rilis v0.2.0.
