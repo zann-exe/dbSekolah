@@ -17,9 +17,10 @@ const ALL_PT_PATH = path.join(PT_DIR, 'all-pt.json');
 const CACHE_PATH = path.join(__dirname, '..', 'raw-pt', 'enrichment-cache.json');
 const REGENCIES_DIR = path.join(__dirname, '..', 'data', 'wilayah', 'regencies');
 const API_BASE = 'https://pddikti.fastapicloud.dev/api';
-const MAX_RETRIES = 3;
-const CONCURRENCY = 15; // parallel requests
+const MAX_RETRIES = 4;
+const CONCURRENCY = 2; // parallel requests (low to avoid upstream PDDikti timeouts)
 const CACHE_SAVE_INTERVAL = 50;
+const REQUEST_DELAY_MS = 1000; // delay between individual API calls
 
 function loadJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -115,15 +116,16 @@ async function sleep(ms) {
 async function fetchWithRetry(url, retries = MAX_RETRIES) {
   for (let i = 0; i <= retries; i++) {
     try {
+      await sleep(REQUEST_DELAY_MS); // polite delay between requests
       const res = await fetch(url, {
         headers: {
           'Accept': 'application/json',
           'User-Agent': 'dbSekolah-enricher/1.0'
         }
       });
-      if (res.status === 429) {
-        const backoff = Math.min(30000, 2000 * (i + 1));
-        console.warn(`  429 rate limit, backing off ${backoff}ms...`);
+      if (res.status === 429 || res.status === 408 || res.status === 503) {
+        const backoff = Math.min(60000, 3000 * (i + 1));
+        console.warn(`  ${res.status} rate limit/timeout, backing off ${backoff}ms...`);
         await sleep(backoff);
         continue;
       }
@@ -133,8 +135,9 @@ async function fetchWithRetry(url, retries = MAX_RETRIES) {
       return await res.json();
     } catch (err) {
       if (i === retries) throw err;
-      console.warn(`  Retry ${i + 1}/${retries}: ${err.message}`);
-      await sleep(1000 * (i + 1));
+      const backoff = Math.min(30000, 1500 * (i + 1));
+      console.warn(`  Retry ${i + 1}/${retries}: ${err.message} (backoff ${backoff}ms)`);
+      await sleep(backoff);
     }
   }
   throw new Error('Max retries exceeded');
@@ -144,13 +147,22 @@ async function searchPt(pt, cache) {
   const cacheKey = pt.kode_pt || pt.nama_pt;
   if (cache.search[cacheKey]) return cache.search[cacheKey];
 
-  const url = `${API_BASE}/search/pt/${encodeURIComponent(pt.nama_pt)}`;
-  const data = await fetchWithRetry(url);
+  // Try search by kode_pt first (faster and more precise)
+  let url = `${API_BASE}/search/pt/${encodeURIComponent(pt.kode_pt)}`;
+  let data = await fetchWithRetry(url);
+  if (!Array.isArray(data)) data = [];
 
-  // Prefer exact kode match, then name match
-  const match = data.find(item => String(item.kode).trim() === String(pt.kode_pt).trim())
-    || data.find(item => item.nama && item.nama.toUpperCase() === pt.nama_pt.toUpperCase())
-    || data[0];
+  let match = data.find(item => String(item.kode).trim() === String(pt.kode_pt).trim());
+
+  // Fallback to search by name if kode not found
+  if (!match && data.length === 0) {
+    url = `${API_BASE}/search/pt/${encodeURIComponent(pt.nama_pt)}`;
+    data = await fetchWithRetry(url);
+    if (!Array.isArray(data)) data = [];
+    match = data.find(item => String(item.kode).trim() === String(pt.kode_pt).trim())
+      || data.find(item => item.nama && item.nama.toUpperCase() === pt.nama_pt.toUpperCase())
+      || data[0];
+  }
 
   if (match) cache.search[cacheKey] = match;
   return match || null;
@@ -161,6 +173,7 @@ async function getDetail(searchId, cache) {
 
   const url = `${API_BASE}/pt/detail/${encodeURIComponent(searchId)}/`;
   const data = await fetchWithRetry(url);
+  if (!data || typeof data !== 'object') return null;
   cache.detail[searchId] = data;
   return data;
 }

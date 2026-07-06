@@ -9,13 +9,16 @@
     "provinsi_id": "65",
     "provinsi": "KALIMANTAN UTARA",
     "kabupaten_id": "",
-    "kabupaten": "",
+    "kabupaten": "Kab. Bulungan",
     "kecamatan": "",
-    "alamat": "",
-    "lintang": null,
-    "bujur": null,
-    "akreditasi": "",
-    "kelompok": "Perguruan Tinggi Swasta"
+    "alamat": "-",
+    "lintang": 2.8685821,
+    "bujur": 117.3901283,
+    "akreditasi": "Baik",
+    "kelompok": "Perguruan Tinggi Swasta",
+    "status_milik": "Perguruan Tinggi Agama",
+    "pembina": "PTA Islam Swasta",
+    "status_aktif": "Aktif"
   },
   {
     "id_sp": "E1FECF70-4E85-4737-9009-809017C5C4EF",
@@ -27,13 +30,16 @@
     "provinsi_id": "65",
     "provinsi": "KALIMANTAN UTARA",
     "kabupaten_id": "",
-    "kabupaten": "",
+    "kabupaten": "Kab. Malinau",
     "kecamatan": "",
     "alamat": "",
     "lintang": null,
     "bujur": null,
     "akreditasi": "",
-    "kelompok": "Perguruan Tinggi Swasta"
+    "kelompok": "Perguruan Tinggi Swasta",
+    "status_milik": "Perguruan Tinggi Agama",
+    "pembina": "PTA Kristen Swasta",
+    "status_aktif": "Aktif"
   },
   {
     "id_sp": "2BC73451-40AD-4E98-A89B-FE495C35D9B0",
@@ -45,12 +51,15 @@
     "provinsi_id": "65",
     "provinsi": "KALIMANTAN UTARA",
     "kabupaten_id": "",
-    "kabupaten": "",
+    "kabupaten": "Kab. Nunukan",
     "kecamatan": "",
     "alamat": "",
-    "lintang": null,
-    "bujur": null,
-    "akreditasi": "",
-    "kelompok": "Perguruan Tinggi Negeri"
+    "lintang": 4.0801219,
+    "bujur": 117.6925927,
+    "akreditasi": "Baik",
+    "kelompok": "Perguruan Tinggi Negeri",
+    "status_milik": "Perguruan Tinggi Negeri",
+    "pembina": "PTN",
+    "status_aktif": "Aktif"
   }
 ]

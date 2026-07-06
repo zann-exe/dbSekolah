@@ -14,6 +14,7 @@
     "normalize-pt": "node build/normalize-pt.js",
     "validate-pt": "node build/validate-pt.js",
     "enrich-pt": "node build/enrich-pt.js",
+    "enrich-pt:run": "powershell -ExecutionPolicy Bypass -File run-enrich-pt.ps1",
     "build-pt": "node build/fetch-pt.js && node build/normalize-pt.js && node build/validate-pt.js"
   },
   "author": "zann-exe",
