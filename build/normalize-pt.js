@@ -4,6 +4,7 @@ import path from 'path';
 const rawFile = path.resolve('raw-pt/pt.json');
 const outputDir = path.resolve('data/perguruan-tinggi');
 const indexDir = path.resolve('data/index');
+const allPtPath = path.join(outputDir, 'all-pt.json');
 
 if (!fs.existsSync(rawFile)) {
     console.error('raw-pt/pt.json not found! Run build/fetch-pt.js first.');
@@ -13,6 +14,28 @@ if (!fs.existsSync(rawFile)) {
 const rawData = JSON.parse(fs.readFileSync(rawFile, 'utf8'));
 const provinces = JSON.parse(fs.readFileSync(path.resolve('data/wilayah/provinces.json'), 'utf8'));
 const prefixMap = JSON.parse(fs.readFileSync(path.resolve('build/mapping-kode-pt.json'), 'utf8'));
+
+// Load existing enriched data to preserve enriched fields
+const enrichedData = {};
+if (fs.existsSync(allPtPath)) {
+    const existing = JSON.parse(fs.readFileSync(allPtPath, 'utf8'));
+    for (const pt of existing) {
+        if (pt.kode_pt) {
+            enrichedData[pt.kode_pt] = {
+                kabupaten_id: pt.kabupaten_id || '',
+                kabupaten: pt.kabupaten || '',
+                kecamatan: pt.kecamatan || '',
+                alamat: pt.alamat || '',
+                lintang: pt.lintang || null,
+                bujur: pt.bujur || null,
+                akreditasi: pt.akreditasi || '',
+                pembina: pt.pembina || '',
+                status_aktif: pt.status_aktif || ''
+            };
+        }
+    }
+    console.log(`Loaded enriched data for ${Object.keys(enrichedData).length} PT records`);
+}
 
 const provById = Object.fromEntries(provinces.map(p => [p.id, p.name]));
 
@@ -120,6 +143,9 @@ function normalizeRecord(record) {
     const status = detectStatus(record);
     const provId = detectProvince(record);
 
+    // Preserve enriched fields if available
+    const enriched = enrichedData[kode] || {};
+
     return {
         id_sp: (record.id_sp || '').trim(),
         kode_pt: kode,
@@ -129,14 +155,16 @@ function normalizeRecord(record) {
         status: status,
         provinsi_id: provId,
         provinsi: provById[provId] || '',
-        kabupaten_id: '',
-        kabupaten: '',
-        kecamatan: '',
-        alamat: '',
-        lintang: null,
-        bujur: null,
-        akreditasi: '',
-        kelompok: status === 'negeri' ? 'Perguruan Tinggi Negeri' : 'Perguruan Tinggi Swasta'
+        kabupaten_id: enriched.kabupaten_id || '',
+        kabupaten: enriched.kabupaten || '',
+        kecamatan: enriched.kecamatan || '',
+        alamat: enriched.alamat || '',
+        lintang: enriched.lintang || null,
+        bujur: enriched.bujur || null,
+        akreditasi: enriched.akreditasi || '',
+        kelompok: status === 'negeri' ? 'Perguruan Tinggi Negeri' : 'Perguruan Tinggi Swasta',
+        pembina: enriched.pembina || '',
+        status_aktif: enriched.status_aktif || ''
     };
 }
 

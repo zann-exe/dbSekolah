@@ -603,19 +603,21 @@ Berdasarkan query API (2026-07-06):
     "status": "negeri",
     "provinsi_id": "31",
     "provinsi": "DKI JAKARTA",
-    "kabupaten_id": "",
-    "kabupaten": "",
-    "kecamatan": "",
-    "alamat": "",
-    "lintang": null,
-    "bujur": null,
-    "akreditasi": "",
-    "kelompok": "Perguruan Tinggi Negeri"
+    "kabupaten_id": "3172",
+    "kabupaten": "Jakarta Selatan",
+    "kecamatan": "Kebayoran Baru",
+    "alamat": "Jl. Rawamangun Muka No. 1",
+    "lintang": -6.2678,
+    "bujur": 106.8023,
+    "akreditasi": "A",
+    "kelompok": "Perguruan Tinggi Negeri",
+    "pembina": "Kementerian Pendidikan Dasar dan Menengah",
+    "status_aktif": "Aktif"
   }
 ]
 ```
 
-**Catatan**: Field `id_sp`, `kabupaten_id`, `kabupaten`, `kecamatan`, `alamat`, `lintang`, `bujur`, `akreditasi`, dan `nama_singkat` masih kosong pada output MVP karena sumber list (`loadpt`) hanya menyediakan `id_sp`, `kode_pt`, dan `nama_pt`. Enrichment detail bisa dilakukan pasca-MVP via API detail atau sumber alternatif.
+**Catatan**: Field `kabupaten_id`, `kabupaten`, `kecamatan`, `alamat`, `lintang`, `bujur`, `akreditasi`, `pembina`, dan `status_aktif` diisi melalui enrichment script (`build/enrich-pt.js`) yang mengambil data detail dari API PDDikti wrapper. Field `nama_singkat` masih kosong karena tidak tersedia di sumber data.
 
 ### 14.6 Transformasi vs API Asli
 
@@ -626,22 +628,23 @@ Berdasarkan query API (2026-07-06):
 | `nama_pt`                   | `nama_pt`        | Trim, preserve case                             |
 | `nm_singkat`                | `nama_singkat`   | Kosong (tidak tersedia di sumber list)          |
 | `kelompok`                  | `kelompok`       | Dihitung dari `status` — "Perguruan Tinggi Negeri" / "Perguruan Tinggi Swasta" |
-| `pembina`                   | —                | Tidak tersedia di sumber list (pasca-MVP)       |
+| `pembina`                   | `pembina`        | Diisi via enrichment API detail                  |
 | `status_pt`                 | `status`         | Dihitung dari prefix kode PT dan keyword nama (negeri/swasta) |
-| `akreditasi_pt`             | `akreditasi`     | Kosong (tidak tersedia di sumber list)          |
+| `status_pt`                 | `status_aktif`   | Diisi via enrichment API detail                  |
+| `akreditasi_pt`             | `akreditasi`     | Diisi via enrichment API detail                  |
 | `provinsi_pt`               | `provinsi`       | Mapping via `build/mapping-kode-pt.json` (3-digit prefix) dan fallback keyword nama |
-| `kab_kota_pt`               | `kabupaten`      | Kosong (tidak tersedia di sumber list)          |
-| `kecamatan_pt`              | `kecamatan`      | Kosong                                          |
-| `lintang_pt`                | `lintang`        | Kosong                                          |
-| `bujur_pt`                  | `bujur`          | Kosong                                          |
-| `tgl_berdiri_pt`            | `tgl_berdiri`    | Tidak tersedia                                  |
-| `kode_pos`                  | `kode_pos`       | Tidak tersedia                                  |
+| `kab_kota_pt`               | `kabupaten`      | Diisi via enrichment API detail, mapping ke Kemendagri ID |
+| `kecamatan_pt`              | `kecamatan`      | Diisi via enrichment API detail                  |
+| `lintang_pt`                | `lintang`        | Diisi via enrichment API detail                  |
+| `bujur_pt`                  | `bujur`          | Diisi via enrichment API detail                  |
+| `alamat`                    | `alamat`         | Diisi via enrichment API detail                  |
+| `tgl_berdiri_pt`            | —                | Tidak tersedia                                  |
+| `kode_pos`                  | —                | Tidak tersedia                                  |
 | `email`, `no_tel`, `website`| —                | Tidak tersedia                                  |
-| `alamat`                    | `alamat`         | Tidak tersedia                                  |
 
 **Field turunan**:
 - `provinsi_id`: Mapping dari 3-digit prefix `kode_pt` → `build/mapping-kode-pt.json` → Kemendagri ID; fallback keyword matching dari nama PT.
-- `kabupaten_id`: Belum diisi (perlu enrichment detail).
+- `kabupaten_id`: Diisi via enrichment API detail, mapping nama kabupaten ke Kemendagri ID.
 - `bentuk_pt`: Klasifikasi dari `nama_pt` — Universitas, Institut, Sekolah Tinggi, Politeknik, Akademi, Lainnya.
 - `status`: "negeri" / "swasta" dari prefix kode PT dan keyword nama (e.g., "Negeri", "Kementerian", "Politeknik Negeri").
 
@@ -670,8 +673,14 @@ npm run validate-pt
 npm run build-pt
 ```
 
-**Enrichment pasca-MVP**:
-- Untuk mengisi `kabupaten`, `koordinat`, `akreditasi`, `alamat`, `kontak`, dan `tgl_berdiri`, perlu hit API detail per PT (e.g., wrapper API `/api/pt/detail/{id_pt}/`) atau integrasi dengan data lain.
+**Enrichment**:
+- Untuk mengisi `kabupaten`, `koordinat`, `akreditasi`, `alamat`, `pembina`, dan `status_aktif`, jalankan enrichment script:
+```bash
+npm run enrich-pt
+# atau untuk auto-restart + validation:
+npm run enrich-pt:run
+```
+- Enrichment menggunakan API PDDikti wrapper (`pddikti.fastapicloud.dev`) dengan cache di `raw-pt/enrichment-cache.json` untuk resume capability.
 - Rate limit wrapper: <500 req/day (`pddikti.rone.dev`), >500 req/day (`pddikti.fastapicloud.dev`). Gunakan throttle, retry backoff, dan cache.
 
 ### 14.8 Validasi Data PT
@@ -682,7 +691,7 @@ npm run build-pt
 - Cek `bentuk_pt` hanya nilai valid: `Universitas`, `Institut`, `Sekolah Tinggi`, `Politeknik`, `Akademi`, `Lainnya`.
 - Cek index `data/index/pt-by-kode.json` mencakup seluruh `kode_pt`.
 - Cek per-province file `data/perguruan-tinggi/{provinsi_id}.json` tersedia untuk setiap provinsi yang ter-mapping.
-- Koordinat, kabupaten, akreditasi, dan field kontak sengaja tidak divalidasi pada MVP karena belum diisi (perlu enrichment pasca-MVP).
+- Field enrichment (`kabupaten_id`, `kabupaten`, `kecamatan`, `alamat`, `lintang`, `bujur`, `akreditasi`, `pembina`, `status_aktif`) tidak divalidasi secara ketat karena tidak semua PT memiliki data lengkap dari API.
 - **Build gagal jika ada mismatch pada field required atau duplikat `kode_pt`**. Setelah validasi lulus, pipeline bisa commit & push.
 
 ### 14.9 Index Perguruan Tinggi
@@ -690,12 +699,12 @@ npm run build-pt
 **`data/index/pt-by-kode.json`**:
 ```json
 {
-  "001037": { "provinsi_id": "31", "kabupaten_id": "", "nama_pt": "Universitas Negeri Jakarta" },
-  "031005": { "provinsi_id": "31", "kabupaten_id": "", "nama_pt": "Universitas Jakarta" }
+  "001037": { "provinsi_id": "31", "kabupaten_id": "3172", "nama_pt": "Universitas Negeri Jakarta" },
+  "031005": { "provinsi_id": "31", "kabupaten_id": "3171", "nama_pt": "Universitas Jakarta" }
 }
 ```
 
-**Catatan**: `kabupaten_id` kosong pada MVP karena belum di-enrich. Index tetap berguna untuk lookup cepat `kode_pt` → `provinsi_id`.
+**Catatan**: `kabupaten_id` diisi setelah enrichment. Index berguna untuk lookup cepat `kode_pt` → `provinsi_id` dan `kabupaten_id`.
 
 **Update `data/index/summary.json`** — tambah section PT:
 ```json

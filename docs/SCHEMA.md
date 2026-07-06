@@ -96,14 +96,16 @@ File PT disimpan per provinsi (`{provinsi_id}.json`) dan secara aggregate (`all-
     "status": "negeri",
     "provinsi_id": "31",
     "provinsi": "DKI JAKARTA",
-    "kabupaten_id": "",
-    "kabupaten": "",
-    "kecamatan": "",
-    "alamat": "",
-    "lintang": null,
-    "bujur": null,
-    "akreditasi": "",
-    "kelompok": "Perguruan Tinggi Negeri"
+    "kabupaten_id": "3172",
+    "kabupaten": "Jakarta Selatan",
+    "kecamatan": "Kebayoran Baru",
+    "alamat": "Jl. Rawamangun Muka No. 1",
+    "lintang": -6.2678,
+    "bujur": 106.8023,
+    "akreditasi": "A",
+    "kelompok": "Perguruan Tinggi Negeri",
+    "pembina": "Kementerian Pendidikan Dasar dan Menengah",
+    "status_aktif": "Aktif"
   }
 ]
 ```
@@ -119,14 +121,16 @@ File PT disimpan per provinsi (`{provinsi_id}.json`) dan secara aggregate (`all-
 | `status` | String | Status: `"negeri"` atau `"swasta"`. |
 | `provinsi_id` | String | Kode wilayah provinsi 2-digit Kemendagri (contoh: `"31"`). Bisa kosong jika unmapped. |
 | `provinsi` | String | Nama provinsi (UPPERCASE). |
-| `kabupaten_id` | String | Kode wilayah kabupaten/kota Kemendagri. Kosong pada MVP. |
-| `kabupaten` | String | Nama kabupaten/kota. Kosong pada MVP. |
-| `kecamatan` | String | Kecamatan. Kosong pada MVP. |
-| `alamat` | String | Alamat jalan. Kosong pada MVP. |
-| `lintang` | Number/Null | Latitude. Kosong pada MVP. |
-| `bujur` | Number/Null | Longitude. Kosong pada MVP. |
-| `akreditasi` | String | Akreditasi PT. Kosong pada MVP. |
+| `kabupaten_id` | String | Kode wilayah kabupaten/kota 4-digit Kemendagri. Diisi setelah enrichment. |
+| `kabupaten` | String | Nama kabupaten/kota. Diisi setelah enrichment. |
+| `kecamatan` | String | Kecamatan. Diisi setelah enrichment. |
+| `alamat` | String | Alamat jalan. Diisi setelah enrichment. |
+| `lintang` | Number/Null | Latitude. Diisi setelah enrichment. |
+| `bujur` | Number/Null | Longitude. Diisi setelah enrichment. |
+| `akreditasi` | String | Akreditasi PT (A, B, C, dll). Diisi setelah enrichment. |
 | `kelompok` | String | `"Perguruan Tinggi Negeri"` atau `"Perguruan Tinggi Swasta"`. |
+| `pembina` | String | Kementerian/instansi pembina PT. Diisi setelah enrichment. |
+| `status_aktif` | String | Status aktif PT (Aktif, Tidak Aktif, dll). Diisi setelah enrichment. |
 
 ---
 

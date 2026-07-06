@@ -1,0 +1,27 @@
+Enrichment PT Progress (COMPLETED)
+==================================
+Last updated: 2026-07-06
+
+Status:
+- build/enrich-pt.js created and pushed to GitHub (commit 23501f9).
+- run-enrich-pt.ps1 wrapper created for auto-restart + validation.
+- Enrichment completed: 6361/6600 PT enriched (96.4%)
+- 239 PT failed enrichment (API timeout/data not found)
+- Cache saved at: raw-pt/enrichment-cache.json
+- Validation passed: npm run validate-pt
+- Enriched data committed and pushed (commit f1bed95)
+
+Enrichment fields added:
+- kabupaten_id, kabupaten, kecamatan, alamat
+- lintang, bujur, akreditasi
+- pembina, status_aktif
+
+Updates made:
+1. normalize-pt.js — now preserves enriched fields on future rebuilds
+2. docs/SCHEMA.md — updated PT schema with enrichment fields
+3. dbsekolah.md — updated PT documentation with enrichment details
+4. package.json — added enrich-pt:run script
+
+Next steps (if needed):
+- Re-run enrichment for failed PT: npm run enrich-pt
+- Update data when PDDikti source refreshes (semester updates)
