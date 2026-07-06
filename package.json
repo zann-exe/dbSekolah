@@ -13,6 +13,7 @@
     "fetch-pt": "node build/fetch-pt.js",
     "normalize-pt": "node build/normalize-pt.js",
     "validate-pt": "node build/validate-pt.js",
+    "enrich-pt": "node build/enrich-pt.js",
     "build-pt": "node build/fetch-pt.js && node build/normalize-pt.js && node build/validate-pt.js"
   },
   "author": "zann-exe",
